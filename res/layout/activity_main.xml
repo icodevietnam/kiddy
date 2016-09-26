@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:background="#000000"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:layout_centerInParent="true"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:gravity="center">
+
+
+    <Button
+        android:id="@+id/btnBirdPage"
+        android:text="Create Bird"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/btnManageBirdPage"
+        android:text="Manage Action"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_below="@+id/btnBirdPage"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <!--<Button
+        android:id="@+id/btnCourseWork3"
+        android:text="Course Work 3"
+        android:textColor="#000000"
+        android:textSize="22dp"
+        android:layout_below="@+id/btnManageBirdPage"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />-->
+
+</RelativeLayout>

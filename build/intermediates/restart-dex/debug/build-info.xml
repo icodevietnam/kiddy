@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    api-level="21"
+    density="xxhdpi"
+    format="8"
+    plugin-version="2.2.0"
+    timestamp="17431991555736"
+    token="-5975343444931965641"
+    verifier="FULL_BUILD_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="342" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="475" />
+    <task
+        name="verifier"
+        duration="52" />
+
+    <artifact
+        location="/media/DATA/kiddy/build/outputs/apk/kiddy-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="17431991555736"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/media/DATA/kiddy/build/outputs/apk/kiddy-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/menu/menu_add_bird.xml",
+        "source": "/media/DATA/kiddy/res/menu/menu_add_bird.xml"
+    },
+    {
+        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/menu/menu_my_list.xml",
+        "source": "/media/DATA/kiddy/res/menu/menu_my_list.xml"
+    },
+    {
+        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/menu/menu_add_report.xml",
+        "source": "/media/DATA/kiddy/res/menu/menu_add_report.xml"
+    },
+    {
+        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/menu/menu_list_event.xml",
+        "source": "/media/DATA/kiddy/res/menu/menu_list_event.xml"
+    },
+    {
+        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/menu/menu_list_bird.xml",
+        "source": "/media/DATA/kiddy/res/menu/menu_list_bird.xml"
+    },
+    {
+        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/menu/menu_view.xml",
+        "source": "/media/DATA/kiddy/res/menu/menu_view.xml"
+    },
+    {
+        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/menu/menu_view_report.xml",
+        "source": "/media/DATA/kiddy/res/menu/menu_view_report.xml"
+    }
+]

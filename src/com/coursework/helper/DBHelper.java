@@ -7,8 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.coursework.com.coursework.domain.Bird;
 import com.coursework.com.coursework.domain.Event;
+import com.coursework.com.coursework.domain.Kiddy;
 import com.coursework.com.coursework.domain.Report;
 
 import java.util.ArrayList;
@@ -16,16 +16,16 @@ import java.util.List;
 
 public class DBHelper extends SQLiteOpenHelper{
 
-    public static final String DATABASE_NAME = "ADMD.db";
+    public static final String DATABASE_NAME = "KiddyCW.db";
 
     //Bird
-    public static final String BIRD_TABLE = "bird";
-    public static final String BIRD_ID = "id";
-    public static final String BIRD_NAME = "bird_name";
-    public static final String BIRD_LOCATION = "bird_location";
-    public static final String BIRD_DATE = "bird_date";
-    public static final String BIRD_TIME = "bird_time";
-    public static final String BIRD_WATCHER_NAME = "bird_watcher_name";
+    public static final String KIDDY_TABLE = "kiddy";
+    public static final String KIDDY_ID = "id";
+    public static final String KIDDY_ACTIVITY_NAME = "activityName";
+    public static final String KIDDY_LOCATION = "location";
+    public static final String KIDDY_DATE = "date";
+    public static final String KIDDY_TIME = "time";
+    public static final String KIDDY_REPORTER_NAME = "reporterName";
 
     //Event
 
@@ -50,7 +50,7 @@ public class DBHelper extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         //Create table bird
-        db.execSQL("create table " + BIRD_TABLE + " ( " + BIRD_ID + " integer primary key autoincrement not null ," + BIRD_NAME + " text," + BIRD_LOCATION + " text," + BIRD_DATE + " text," + BIRD_TIME + " text," + BIRD_WATCHER_NAME + " text)");
+        db.execSQL("create table " + KIDDY_TABLE + " ( " + KIDDY_ID + " integer primary key autoincrement not null ," + KIDDY_ACTIVITY_NAME + " text," + KIDDY_LOCATION + " text," + KIDDY_DATE + " text," + KIDDY_TIME + " text," + KIDDY_REPORTER_NAME + " text)");
         db.execSQL("create table " + EVENT_TABLE + " ( " + EVENT_ID + " integer primary key autoincrement not null ," + EVENT_NAME + " text," + EVENT_DESC + " text)");
         db.execSQL("create table " + REPORT_TABLE + " ( " + REPORT_ID + " integer primary key autoincrement not null ," + REPORT_NAME + " text," + REPORT_DESC + " text,"+REPORT_BIRD_ID +" text)");
         Log.d("Init database:", "Init two tables successfully");
@@ -59,23 +59,23 @@ public class DBHelper extends SQLiteOpenHelper{
     // OnUpgrade SQLite
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXIST " +BIRD_TABLE);
+        db.execSQL("DROP TABLE IF EXIST " +KIDDY_TABLE);
         db.execSQL("DROP TABLE IF EXIST " +REPORT_TABLE);
         db.execSQL("DROP TABLE IF EXIST " +EVENT_TABLE);
         onCreate(db);
     }
 
     //Insert Bird
-    public boolean insertBird(Bird bird){
+    public boolean insertKiddy(Kiddy kiddy){
         try {
             SQLiteDatabase db = this.getWritableDatabase();
             ContentValues contentValues = new ContentValues();
-            contentValues.put(BIRD_NAME,bird.getBirdName());
-            contentValues.put(BIRD_LOCATION,bird.getLocation());
-            contentValues.put(BIRD_DATE,bird.getDate());
-            contentValues.put(BIRD_TIME,bird.getTime());
-            contentValues.put(BIRD_WATCHER_NAME,bird.getWatcherName());
-            db.insert(BIRD_TABLE,null,contentValues);
+            contentValues.put(KIDDY_ACTIVITY_NAME,kiddy.getActivityName());
+            contentValues.put(KIDDY_LOCATION,kiddy.getLocation());
+            contentValues.put(KIDDY_DATE,kiddy.getDate());
+            contentValues.put(KIDDY_TIME,kiddy.getTime());
+            contentValues.put(KIDDY_REPORTER_NAME,kiddy.getReporterName());
+            db.insert(KIDDY_TABLE,null,contentValues);
             return true;
         }catch (Exception e){
             e.printStackTrace();
@@ -114,16 +114,16 @@ public class DBHelper extends SQLiteOpenHelper{
         }
     }
 
-    public boolean updateBird(Bird bird){
+    public boolean updateKiddy(Kiddy kiddy){
         try {
             SQLiteDatabase db = this.getWritableDatabase();
             ContentValues contentValues = new ContentValues();
-            contentValues.put(BIRD_NAME,bird.getBirdName());
-            contentValues.put(BIRD_LOCATION,bird.getLocation());
-            contentValues.put(BIRD_DATE,bird.getDate());
-            contentValues.put(BIRD_TIME,bird.getTime());
-            contentValues.put(BIRD_WATCHER_NAME, bird.getWatcherName());
-            db.update(BIRD_TABLE, contentValues, BIRD_ID + " = ? ", new String[]{Integer.toString(bird.getId())});
+            contentValues.put(KIDDY_ACTIVITY_NAME,kiddy.getActivityName());
+            contentValues.put(KIDDY_LOCATION,kiddy.getLocation());
+            contentValues.put(KIDDY_DATE,kiddy.getDate());
+            contentValues.put(KIDDY_TIME,kiddy.getTime());
+            contentValues.put(KIDDY_ACTIVITY_NAME, kiddy.getReporterName());
+            db.update(KIDDY_TABLE, contentValues, KIDDY_ID + " = ? ", new String[]{Integer.toString(kiddy.getId())});
             return true;
         }catch (Exception e){
             e.printStackTrace();
@@ -133,22 +133,22 @@ public class DBHelper extends SQLiteOpenHelper{
 
     public Integer deleteBird(Integer id){
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.delete(BIRD_TABLE,BIRD_ID + " = ? ",new String[]{Integer.toString(id)});
+        return db.delete(KIDDY_TABLE,KIDDY_ID + " = ? ",new String[]{Integer.toString(id)});
     }
 
 
-    public Bird getBirdData(int id){
+    public Kiddy getKiddyData(int id){
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(" select * from " + BIRD_TABLE + " where " + BIRD_ID + " = " + id + "", null);
+        Cursor cursor = db.rawQuery(" select * from " + KIDDY_TABLE + " where " + KIDDY_ID + " = " + id + "", null);
         cursor.moveToFirst();
-        Bird bird = new Bird();
-        bird.setId(cursor.getInt(cursor.getColumnIndex(BIRD_ID)));
-        bird.setBirdName(cursor.getString(cursor.getColumnIndex(BIRD_NAME)));
-        bird.setLocation(cursor.getString(cursor.getColumnIndex(BIRD_LOCATION)));
-        bird.setDate(cursor.getString(cursor.getColumnIndex(BIRD_DATE)));
-        bird.setTime(cursor.getString(cursor.getColumnIndex(BIRD_TIME)));
-        bird.setWatcherName(cursor.getString(cursor.getColumnIndex(BIRD_WATCHER_NAME)));
-        return bird;
+        Kiddy kiddy = new Kiddy();
+        kiddy.setId(cursor.getInt(cursor.getColumnIndex(KIDDY_ID)));
+        kiddy.setActivityName(cursor.getString(cursor.getColumnIndex(KIDDY_ACTIVITY_NAME)));
+        kiddy.setLocation(cursor.getString(cursor.getColumnIndex(KIDDY_LOCATION)));
+        kiddy.setDate(cursor.getString(cursor.getColumnIndex(KIDDY_DATE)));
+        kiddy.setTime(cursor.getString(cursor.getColumnIndex(KIDDY_TIME)));
+        kiddy.setReporterName(cursor.getString(cursor.getColumnIndex(KIDDY_REPORTER_NAME)));
+        return kiddy;
     }
 
     public List<Report> getAllReports(String birdId){
@@ -171,78 +171,78 @@ public class DBHelper extends SQLiteOpenHelper{
         return listReports;
     }
 
-    public Boolean checkDuplicate(String birdName){
-        List<Bird> listBirds = new ArrayList<Bird>();
+    public Boolean checkKiddyDuplicate(String birdName){
+        List<Kiddy> listKiddies = new ArrayList<Kiddy>();
         // Select all bird query
-        String query = "SELECT * FROM " + BIRD_TABLE + " WHERE " + BIRD_NAME + " ='" +birdName +"'";
+        String query = "SELECT * FROM " + KIDDY_TABLE + " WHERE " + KIDDY_ACTIVITY_NAME + " ='" +birdName +"'";
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         if (cursor.moveToFirst()) {
             do {
-                Bird bird = new Bird();
-                bird.setId(cursor.getInt(cursor.getColumnIndex(BIRD_ID)));
-                bird.setBirdName(cursor.getString(cursor.getColumnIndex(BIRD_NAME)));
-                bird.setLocation(cursor.getString(cursor.getColumnIndex(BIRD_LOCATION)));
-                bird.setDate(cursor.getString(cursor.getColumnIndex(BIRD_DATE)));
-                bird.setTime(cursor.getString(cursor.getColumnIndex(BIRD_TIME)));
-                bird.setWatcherName(cursor.getString(cursor.getColumnIndex(BIRD_WATCHER_NAME)));
+                Kiddy kiddy = new Kiddy();
+                kiddy.setId(cursor.getInt(cursor.getColumnIndex(KIDDY_ID)));
+                kiddy.setActivityName(cursor.getString(cursor.getColumnIndex(KIDDY_ACTIVITY_NAME)));
+                kiddy.setLocation(cursor.getString(cursor.getColumnIndex(KIDDY_LOCATION)));
+                kiddy.setDate(cursor.getString(cursor.getColumnIndex(KIDDY_DATE)));
+                kiddy.setTime(cursor.getString(cursor.getColumnIndex(KIDDY_TIME)));
+                kiddy.setReporterName(cursor.getString(cursor.getColumnIndex(KIDDY_REPORTER_NAME)));
                 // Adding contact to list
-                listBirds.add(bird);
+                listKiddies.add(kiddy);
             } while (cursor.moveToNext());
         }
-        if(listBirds.size() > 0){
+        if(listKiddies.size() > 0){
             return true;
         }else
             return  false;
     }
 
-    public List<Bird> searchByName(String name){
-        List<Bird> listBirds = new ArrayList<Bird>();
+    public List<Kiddy> searchByName(String name){
+        List<Kiddy> listKiddies = new ArrayList<Kiddy>();
         // Select all bird query
         if(name.trim().isEmpty()){
-            listBirds = getAllBirds();
+            listKiddies = getAllKiddies();
         }
         else {
-            String query = "SELECT * FROM " + BIRD_TABLE + " WHERE " + BIRD_NAME + " LIKE '%" + name + "%'";
+            String query = "SELECT * FROM " + KIDDY_TABLE + " WHERE " + KIDDY_ACTIVITY_NAME + " LIKE '%" + name + "%'";
             SQLiteDatabase db = this.getWritableDatabase();
             Cursor cursor = db.rawQuery(query, null);
             if (cursor.moveToFirst()) {
                 do {
-                    Bird bird = new Bird();
-                    bird.setId(cursor.getInt(cursor.getColumnIndex(BIRD_ID)));
-                    bird.setBirdName(cursor.getString(cursor.getColumnIndex(BIRD_NAME)));
-                    bird.setLocation(cursor.getString(cursor.getColumnIndex(BIRD_LOCATION)));
-                    bird.setDate(cursor.getString(cursor.getColumnIndex(BIRD_DATE)));
-                    bird.setTime(cursor.getString(cursor.getColumnIndex(BIRD_TIME)));
-                    bird.setWatcherName(cursor.getString(cursor.getColumnIndex(BIRD_WATCHER_NAME)));
+                    Kiddy kiddy = new Kiddy();
+                    kiddy.setId(cursor.getInt(cursor.getColumnIndex(KIDDY_ID)));
+                    kiddy.setActivityName(cursor.getString(cursor.getColumnIndex(KIDDY_ACTIVITY_NAME)));
+                    kiddy.setLocation(cursor.getString(cursor.getColumnIndex(KIDDY_LOCATION)));
+                    kiddy.setDate(cursor.getString(cursor.getColumnIndex(KIDDY_DATE)));
+                    kiddy.setTime(cursor.getString(cursor.getColumnIndex(KIDDY_TIME)));
+                    kiddy.setReporterName(cursor.getString(cursor.getColumnIndex(KIDDY_REPORTER_NAME)));
                     // Adding contact to list
-                    listBirds.add(bird);
+                    listKiddies.add(kiddy);
                 } while (cursor.moveToNext());
             }
         }
-        return listBirds;
+        return listKiddies;
     }
 
-    public List<Bird> getAllBirds(){
-        List<Bird> listBirds = new ArrayList<Bird>();
+    public List<Kiddy> getAllKiddies(){
+        List<Kiddy> listKiddies = new ArrayList<Kiddy>();
         // Select all bird query
-        String query = "SELECT * FROM " + BIRD_TABLE;
+        String query = "SELECT * FROM " + KIDDY_TABLE;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         if (cursor.moveToFirst()) {
             do {
-                Bird bird = new Bird();
-                bird.setId(cursor.getInt(cursor.getColumnIndex(BIRD_ID)));
-                bird.setBirdName(cursor.getString(cursor.getColumnIndex(BIRD_NAME)));
-                bird.setLocation(cursor.getString(cursor.getColumnIndex(BIRD_LOCATION)));
-                bird.setDate(cursor.getString(cursor.getColumnIndex(BIRD_DATE)));
-                bird.setTime(cursor.getString(cursor.getColumnIndex(BIRD_TIME)));
-                bird.setWatcherName(cursor.getString(cursor.getColumnIndex(BIRD_WATCHER_NAME)));
+                Kiddy kiddy = new Kiddy();
+                kiddy.setId(cursor.getInt(cursor.getColumnIndex(KIDDY_ID)));
+                kiddy.setActivityName(cursor.getString(cursor.getColumnIndex(KIDDY_ACTIVITY_NAME)));
+                kiddy.setLocation(cursor.getString(cursor.getColumnIndex(KIDDY_LOCATION)));
+                kiddy.setDate(cursor.getString(cursor.getColumnIndex(KIDDY_DATE)));
+                kiddy.setTime(cursor.getString(cursor.getColumnIndex(KIDDY_TIME)));
+                kiddy.setReporterName(cursor.getString(cursor.getColumnIndex(KIDDY_REPORTER_NAME)));
                 // Adding report to list
-                listBirds.add(bird);
+                listKiddies.add(kiddy);
             } while (cursor.moveToNext());
         }
-        return listBirds;
+        return listKiddies;
     }
 
     public List<Event> getAllEvents(){

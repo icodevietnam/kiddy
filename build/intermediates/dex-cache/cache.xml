@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/media/DATA/kiddy/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="040a31c25f15285e50efb4f66df96df397b13ca6">
+        <dex dex="/media/DATA/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_3632aaa4d8b3f0eb215c8193e8ff44f527b62148/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/DATA/kiddy/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1d42b26c93f596ca21c24b7ae1aabbee12b880f6">
+        <dex dex="/media/DATA/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c28e0aac477375d39d2ec564e593bcf9273f2090/classes.dex" />
+    </item>
+
+</items>

@@ -1,8 +1,6 @@
 package com.coursework.app;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
@@ -19,13 +17,13 @@ import com.coursework.helper.DBHelper;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class AddBirdActivity extends Activity {
+public class AddKiddyActivity extends Activity {
     private DBHelper myDb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_bird);
+        setContentView(R.layout.activity_add_kiddy);
         final EditText birdName = (EditText)this.findViewById(R.id.inputBirdName);
         final EditText birdLocation = (EditText)this.findViewById(R.id.inputLocation);
         final EditText birdDate = (EditText)this.findViewById(R.id.inputDate);

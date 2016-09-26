@@ -11,23 +11,22 @@
 
 
     <Button
-        android:id="@+id/btnBirdPage"
-        android:text="Create Bird"
+        android:id="@+id/btnKiddyPage"
+        android:text="Create Activity"
         android:textColor="#000000"
         android:textSize="25dp"
-        android:layout_width="180dp"
-        android:layout_height="60dp"
+        android:layout_width="200dp"
         android:layout_centerHorizontal="true"
-        />
+        android:layout_height="55dp" />
 
     <Button
-        android:id="@+id/btnManageBirdPage"
+        android:id="@+id/btnManageKiddyPage"
         android:text="Manage Action"
         android:textColor="#000000"
-        android:textSize="20dp"
-        android:layout_below="@+id/btnBirdPage"
-        android:layout_width="180dp"
-        android:layout_height="60dp"
+        android:textSize="25dp"
+        android:layout_below="@+id/btnKiddyPage"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         />

@@ -4,7 +4,8 @@ public class Report {
     private Integer id;
     private String name;
     private String description;
-    private String birdId;
+    private String kiddyId;
+
 
     public Integer getId() {
         return id;
@@ -30,12 +31,11 @@ public class Report {
         this.description = description;
     }
 
-
-    public String getBirdId() {
-        return birdId;
+    public String getKiddyId() {
+        return kiddyId;
     }
 
-    public void setBirdId(String birdId) {
-        this.birdId = birdId;
+    public void setKiddyId(String kiddyId) {
+        this.kiddyId = kiddyId;
     }
 }

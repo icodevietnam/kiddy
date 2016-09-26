@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,39 +13,37 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.coursework.com.coursework.domain.Bird;
 import com.coursework.com.coursework.domain.Event;
+import com.coursework.com.coursework.domain.Kiddy;
 import com.coursework.helper.DBHelper;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListBirdActivity extends Activity {
+public class ListKiddyActivity extends Activity {
     ListView listView;
     DBHelper myDb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_bird);
+        setContentView(R.layout.activity_list_kiddy);
         myDb = new DBHelper(this);
         ArrayAdapter<String> adapter = null;
         // Get ListView
         listView = (ListView)this.findViewById(R.id.listBird);
-        List<Bird> listBirds = myDb.getAllBirds();
+        List<Kiddy> listKiddies = myDb.getAllKiddies();
         final ArrayList<String> values = new ArrayList<String>();
         final EditText inputSearch = (EditText)this.findViewById(R.id.inputSearch);
         Button btnSearch = (Button)this.findViewById(R.id.btnSearch);
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                List<Bird> searchList = myDb.searchByName(inputSearch.getText().toString());
+                List<Kiddy> searchList = myDb.searchByName(inputSearch.getText().toString());
                 values.removeAll(values);
-                for (Bird bird : searchList) {
-                    String str = bird.getId() + "-Name:" + bird.getBirdName() + "-Location:" + bird.getLocation() + "-Date:" + bird.getDate() + " " + bird.getTime();
+                for (Kiddy kiddy : searchList) {
+                    String str = kiddy.getId() + "-Name:" + kiddy.getActivityName() + "-Location:" + kiddy.getLocation() + "-Date:" + kiddy.getDate() + " " + kiddy.getTime();
                     values.add(str);
                 }
-               /* adapter = new ArrayAdapter<String>(this,
-                        android.R.layout.simple_list_item_1, android.R.id.text1, values);*/
                 setAdapter(getApplicationContext(),values,listView);
                 Event event = new Event();
                 event.setName("Search something");
@@ -54,8 +51,8 @@ public class ListBirdActivity extends Activity {
                 myDb.insertEvent(event);
             }
         });
-        for(Bird bird:listBirds){
-            String str =bird.getId() + "-Name:" + bird.getBirdName() + "-Location:" +bird.getLocation() +"-Date:" +bird.getDate()+" " +bird.getTime();
+        for(Kiddy kiddy:listKiddies){
+            String str =kiddy.getActivityName() + "-Name:" + kiddy.getActivityName() + "-Location:" +kiddy.getLocation() +"-Date:" +kiddy.getDate()+" " +kiddy.getTime();
             values.add(str);
         }
 
@@ -77,8 +74,8 @@ public class ListBirdActivity extends Activity {
                 String itemValue = (String) listView.getItemAtPosition(position);
                 // Show Alert
                 String[] arrayStr = itemValue.split("-");
-                Intent intent = new Intent(ListBirdActivity.this, ViewActivity.class);
-                intent.putExtra("birdId", arrayStr[0]);
+                Intent intent = new Intent(ListKiddyActivity.this, ViewActivity.class);
+                intent.putExtra("kiddyId", arrayStr[0]);
                 startActivity(intent);
             }
         });

@@ -35,13 +35,12 @@ public class MainActivity extends CordovaActivity
         // Set by <content src="index.html" /> in config.xml
         //loadUrl(launchUrl);
         setContentView(R.layout.activity_main);
-        Button btnBirdPage = (Button)this.findViewById(R.id.btnBirdPage);
-        Button btnManageBirdPage = (Button)this.findViewById(R.id.btnManageBirdPage);
-        //Button btnCourseWork3 = (Button)this.findViewById(R.id.btnCourseWork3);
+        Button btnBirdPage = (Button)this.findViewById(R.id.btnKiddyPage);
+        Button btnManageBirdPage = (Button)this.findViewById(R.id.btnManageKiddyPage);
         btnBirdPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,AddBirdActivity.class);
+                Intent intent = new Intent(MainActivity.this,AddKiddyActivity.class);
                 startActivity(intent);
             }
         });
@@ -49,17 +48,12 @@ public class MainActivity extends CordovaActivity
         btnManageBirdPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,ListBirdActivity.class);
+                Intent intent = new Intent(MainActivity.this,ListKiddyActivity.class);
                 startActivity(intent);
             }
         });
 
-        /*btnCourseWork3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,ListEventActivity.class);
-                startActivity(intent);
-            }
-        });*/
+
+
     }
 }

@@ -8,6 +8,10 @@
         "source": "/media/DATA/kiddy/res/layout/activity_view.xml"
     },
     {
+        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/layout/activity_list_kiddy.xml",
+        "source": "/media/DATA/kiddy/res/layout/activity_list_kiddy.xml"
+    },
+    {
         "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/layout/activity_my_list.xml",
         "source": "/media/DATA/kiddy/res/layout/activity_my_list.xml"
     },
@@ -24,11 +28,7 @@
         "source": "/media/DATA/kiddy/res/layout/activity_add_report.xml"
     },
     {
-        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/layout/activity_add_bird.xml",
-        "source": "/media/DATA/kiddy/res/layout/activity_add_bird.xml"
-    },
-    {
-        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/layout/activity_list_bird.xml",
-        "source": "/media/DATA/kiddy/res/layout/activity_list_bird.xml"
+        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/layout/activity_add_kiddy.xml",
+        "source": "/media/DATA/kiddy/res/layout/activity_add_kiddy.xml"
     }
 ]

@@ -21,7 +21,7 @@ public class AddReportActivity extends Activity {
         setContentView(R.layout.activity_add_report);
         myDb = new DBHelper(this);
         final Intent intent = getIntent();
-        final String birdIdString = intent.getStringExtra("birdId");
+        final String kiddyIdString = intent.getStringExtra("kiddyId");
         final EditText inputReportName = (EditText)this.findViewById(R.id.inputReportName);
         final EditText inputReportDescription = (EditText)this.findViewById(R.id.inputReportDescription);
         Button btnAddReportItems = (Button)this.findViewById(R.id.btnAddReportItem);
@@ -31,10 +31,10 @@ public class AddReportActivity extends Activity {
                 Report report = new Report();
                 report.setName(inputReportName.getText().toString());
                 report.setDescription(inputReportDescription.getText().toString());
-                report.setBirdId(birdIdString);
+                report.setKiddyId(kiddyIdString);
                 myDb.insertReport(report);
                 Intent intent1 = new Intent(AddReportActivity.this,ViewActivity.class);
-                intent1.putExtra("birdId",birdIdString);
+                intent1.putExtra("kiddyId",kiddyIdString);
                 startActivity(intent1);
                 finish();
             }

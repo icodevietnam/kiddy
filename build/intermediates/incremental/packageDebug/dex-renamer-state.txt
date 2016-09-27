@@ -1,0 +1,7 @@
+#Tue Sep 27 19:25:24 ICT 2016
+base.0=/media/DATA/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_3632aaa4d8b3f0eb215c8193e8ff44f527b62148
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/media/DATA/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c28e0aac477375d39d2ec564e593bcf9273f2090/classes.dex
+base.1=/media/DATA/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c28e0aac477375d39d2ec564e593bcf9273f2090
+file.0=/media/DATA/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_3632aaa4d8b3f0eb215c8193e8ff44f527b62148/classes.dex

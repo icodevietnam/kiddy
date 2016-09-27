@@ -13,18 +13,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Name:"
-        android:id="@+id/txtBirdName"
+        android:text="Activity Name:"
+        android:id="@+id/txtKiddyName"
         android:layout_marginTop="-10dp"
         android:layout_centerHorizontal="true"
-        android:textColor="#fffcfd" />
+        android:textColor="#fffcfd"
+        android:textSize="30sp" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/inputBirdName"
+        android:id="@+id/textActivityName"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/txtBirdName"
+        android:layout_below="@+id/txtKiddyName"
         android:height="40dp"
         android:width="150dp"
         android:background="#ffffff"
@@ -38,14 +39,15 @@
         android:text="Location:"
         android:id="@+id/txtLocation"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/inputBirdName"
+        android:layout_below="@+id/textActivityName"
         android:layout_centerHorizontal="true"
-        android:textColor="#fffcfd" />
+        android:textColor="#fffcfd"
+        android:textSize="30sp" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/inputLocation"
+        android:id="@+id/textLocation"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/txtLocation"
         android:height="40dp"
@@ -59,16 +61,17 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Date:"
-        android:layout_below="@+id/inputLocation"
+        android:layout_below="@+id/textLocation"
         android:id="@+id/txtDate"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:textColor="#fffcfd" />
+        android:textColor="#fffcfd"
+        android:textSize="30sp" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/inputDate"
+        android:id="@+id/textDate"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/txtDate"
         android:height="40dp"
@@ -82,16 +85,17 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Time:"
-        android:layout_below="@+id/inputDate"
+        android:layout_below="@+id/textDate"
         android:id="@+id/txtTimeSee"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:textColor="#fffcfd" />
+        android:textColor="#fffcfd"
+        android:textSize="30sp" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/inputTimeSee"
+        android:id="@+id/textTime"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/txtTimeSee"
         android:height="40dp"
@@ -104,17 +108,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Watcher:"
-        android:layout_below="@+id/inputTimeSee"
+        android:text="Reporter Name:"
+        android:layout_below="@+id/textTime"
         android:id="@+id/txtWatcherName"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:textColor="#fffcfd" />
+        android:textColor="#fffcfd"
+        android:textSize="30sp" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/inputWatcherName"
+        android:id="@+id/textReporterName"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/txtWatcherName"
         android:height="40dp"
@@ -126,15 +131,14 @@
 
     <Button
         android:id="@+id/btnSave"
-        android:text="Save Bird"
+        android:text="Save Activity Name"
         android:textColor="#000000"
         android:textSize="25dp"
-        android:layout_below="@+id/inputWatcherName"
-        android:layout_width="150dp"
+        android:layout_below="@+id/textReporterName"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        />
+        android:layout_width="300dp" />
 
     <TextView
         android:layout_width="wrap_content"

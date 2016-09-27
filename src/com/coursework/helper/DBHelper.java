@@ -18,7 +18,7 @@ public class DBHelper extends SQLiteOpenHelper{
 
     public static final String DATABASE_NAME = "KiddyCW.db";
 
-    //Bird
+    //KIDDY
     public static final String KIDDY_TABLE = "kiddy";
     public static final String KIDDY_ID = "id";
     public static final String KIDDY_ACTIVITY_NAME = "activityName";
@@ -39,7 +39,7 @@ public class DBHelper extends SQLiteOpenHelper{
     public static final String REPORT_ID = "id";
     public static final String REPORT_NAME ="name";
     public static final String REPORT_DESC="description";
-    public static final String REPORT_BIRD_ID="birdId";
+    public static final String REPORT_KIDDY_ID="kiddyId";
 
     public DBHelper(Context context){
         super(context, DATABASE_NAME, null, 1);
@@ -49,10 +49,9 @@ public class DBHelper extends SQLiteOpenHelper{
     //Create SQLite
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //Create table bird
         db.execSQL("create table " + KIDDY_TABLE + " ( " + KIDDY_ID + " integer primary key autoincrement not null ," + KIDDY_ACTIVITY_NAME + " text," + KIDDY_LOCATION + " text," + KIDDY_DATE + " text," + KIDDY_TIME + " text," + KIDDY_REPORTER_NAME + " text)");
         db.execSQL("create table " + EVENT_TABLE + " ( " + EVENT_ID + " integer primary key autoincrement not null ," + EVENT_NAME + " text," + EVENT_DESC + " text)");
-        db.execSQL("create table " + REPORT_TABLE + " ( " + REPORT_ID + " integer primary key autoincrement not null ," + REPORT_NAME + " text," + REPORT_DESC + " text,"+REPORT_BIRD_ID +" text)");
+        db.execSQL("create table " + REPORT_TABLE + " ( " + REPORT_ID + " integer primary key autoincrement not null ," + REPORT_NAME + " text," + REPORT_DESC + " text,"+REPORT_KIDDY_ID +" text)");
         Log.d("Init database:", "Init two tables successfully");
     }
 
@@ -65,7 +64,6 @@ public class DBHelper extends SQLiteOpenHelper{
         onCreate(db);
     }
 
-    //Insert Bird
     public boolean insertKiddy(Kiddy kiddy){
         try {
             SQLiteDatabase db = this.getWritableDatabase();
@@ -105,7 +103,7 @@ public class DBHelper extends SQLiteOpenHelper{
             ContentValues contentValues = new ContentValues();
             contentValues.put(REPORT_NAME,report.getName());
             contentValues.put(REPORT_DESC,report.getDescription());
-            contentValues.put(REPORT_BIRD_ID,report.getBirdId());
+            contentValues.put(REPORT_KIDDY_ID,report.getKiddyId());
             db.insert(REPORT_TABLE,null,contentValues);
             return true;
         }catch (Exception e){
@@ -131,7 +129,7 @@ public class DBHelper extends SQLiteOpenHelper{
         }
     }
 
-    public Integer deleteBird(Integer id){
+    public Integer deleteKiddy(Integer id){
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(KIDDY_TABLE,KIDDY_ID + " = ? ",new String[]{Integer.toString(id)});
     }
@@ -151,10 +149,9 @@ public class DBHelper extends SQLiteOpenHelper{
         return kiddy;
     }
 
-    public List<Report> getAllReports(String birdId){
+    public List<Report> getAllReports(String kiddyId){
         List<Report> listReports = new ArrayList<Report>();
-        // Select all bird query
-        String query = "SELECT * FROM " + REPORT_TABLE + " WHERE " +REPORT_BIRD_ID + " ='" +birdId+"'";
+        String query = "SELECT * FROM " + REPORT_TABLE + " WHERE " +REPORT_KIDDY_ID + " ='" +kiddyId+"'";
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         if (cursor.moveToFirst()) {
@@ -163,7 +160,7 @@ public class DBHelper extends SQLiteOpenHelper{
                 report.setId(cursor.getInt(cursor.getColumnIndex(REPORT_ID)));
                 report.setName(cursor.getString(cursor.getColumnIndex(REPORT_NAME)));
                 report.setDescription(cursor.getString(cursor.getColumnIndex(REPORT_DESC)));
-                report.setBirdId(cursor.getString(cursor.getColumnIndex(REPORT_BIRD_ID)));
+                report.setKiddyId(cursor.getString(cursor.getColumnIndex(REPORT_KIDDY_ID)));
                 // Adding contact to list
                 listReports.add(report);
             } while (cursor.moveToNext());
@@ -171,10 +168,9 @@ public class DBHelper extends SQLiteOpenHelper{
         return listReports;
     }
 
-    public Boolean checkKiddyDuplicate(String birdName){
+    public Boolean checkKiddyDuplicate(String activityName){
         List<Kiddy> listKiddies = new ArrayList<Kiddy>();
-        // Select all bird query
-        String query = "SELECT * FROM " + KIDDY_TABLE + " WHERE " + KIDDY_ACTIVITY_NAME + " ='" +birdName +"'";
+        String query = "SELECT * FROM " + KIDDY_TABLE + " WHERE " + KIDDY_ACTIVITY_NAME + " ='" +activityName +"'";
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         if (cursor.moveToFirst()) {
@@ -198,7 +194,6 @@ public class DBHelper extends SQLiteOpenHelper{
 
     public List<Kiddy> searchByName(String name){
         List<Kiddy> listKiddies = new ArrayList<Kiddy>();
-        // Select all bird query
         if(name.trim().isEmpty()){
             listKiddies = getAllKiddies();
         }
@@ -225,7 +220,6 @@ public class DBHelper extends SQLiteOpenHelper{
 
     public List<Kiddy> getAllKiddies(){
         List<Kiddy> listKiddies = new ArrayList<Kiddy>();
-        // Select all bird query
         String query = "SELECT * FROM " + KIDDY_TABLE;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
@@ -247,7 +241,6 @@ public class DBHelper extends SQLiteOpenHelper{
 
     public List<Event> getAllEvents(){
         List<Event> listEvents = new ArrayList<Event>();
-        // Select all bird query
         String query = "SELECT * FROM " + EVENT_TABLE;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);

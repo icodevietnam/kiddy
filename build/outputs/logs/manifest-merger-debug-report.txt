@@ -100,18 +100,18 @@ category#android.intent.category.LAUNCHER
 ADDED from /media/DATA/kiddy/AndroidManifest.xml:44:17-77
 	android:name
 		ADDED from /media/DATA/kiddy/AndroidManifest.xml:44:27-74
-activity#com.coursework.app.AddBirdActivity
+activity#com.coursework.app.AddKiddyActivity
 ADDED from /media/DATA/kiddy/AndroidManifest.xml:47:9-50:20
 	android:label
-		ADDED from /media/DATA/kiddy/AndroidManifest.xml:49:13-60
+		ADDED from /media/DATA/kiddy/AndroidManifest.xml:49:13-45
 	android:name
-		ADDED from /media/DATA/kiddy/AndroidManifest.xml:48:13-44
-activity#com.coursework.app.ListBirdActivity
+		ADDED from /media/DATA/kiddy/AndroidManifest.xml:48:13-45
+activity#com.coursework.app.ListKiddyActivity
 ADDED from /media/DATA/kiddy/AndroidManifest.xml:51:9-54:20
 	android:label
-		ADDED from /media/DATA/kiddy/AndroidManifest.xml:53:13-61
+		ADDED from /media/DATA/kiddy/AndroidManifest.xml:53:13-46
 	android:name
-		ADDED from /media/DATA/kiddy/AndroidManifest.xml:52:13-45
+		ADDED from /media/DATA/kiddy/AndroidManifest.xml:52:13-46
 activity#com.coursework.app.ViewActivity
 ADDED from /media/DATA/kiddy/AndroidManifest.xml:55:9-58:20
 	android:label

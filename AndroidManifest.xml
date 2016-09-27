@@ -45,12 +45,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AddBirdActivity"
-            android:label="@string/title_activity_add_bird" >
+            android:name=".AddKiddyActivity"
+            android:label="AddKiddyActivity" >
         </activity>
         <activity
-            android:name=".ListBirdActivity"
-            android:label="@string/title_activity_list_bird" >
+            android:name=".ListKiddyActivity"
+            android:label="ListKiddyActivity" >
         </activity>
         <activity
             android:name=".ViewActivity"

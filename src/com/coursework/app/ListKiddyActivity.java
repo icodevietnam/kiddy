@@ -28,7 +28,6 @@ public class ListKiddyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_kiddy);
         myDb = new DBHelper(this);
-        ArrayAdapter<String> adapter = null;
         // Get ListView
         listView = (ListView)this.findViewById(R.id.listBird);
         List<Kiddy> listKiddies = myDb.getAllKiddies();
@@ -84,7 +83,7 @@ public class ListKiddyActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_list_bird, menu);
+        getMenuInflater().inflate(R.menu.menu_list_kiddy, menu);
         return true;
     }
 

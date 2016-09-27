@@ -1,7 +1,7 @@
 [
     {
-        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/menu/menu_add_bird.xml",
-        "source": "/media/DATA/kiddy/res/menu/menu_add_bird.xml"
+        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/menu/menu_add_kiddy.xml",
+        "source": "/media/DATA/kiddy/res/menu/menu_add_kiddy.xml"
     },
     {
         "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/menu/menu_my_list.xml",
@@ -16,8 +16,8 @@
         "source": "/media/DATA/kiddy/res/menu/menu_list_event.xml"
     },
     {
-        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/menu/menu_list_bird.xml",
-        "source": "/media/DATA/kiddy/res/menu/menu_list_bird.xml"
+        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/menu/menu_list_kiddy.xml",
+        "source": "/media/DATA/kiddy/res/menu/menu_list_kiddy.xml"
     },
     {
         "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/menu/menu_view.xml",

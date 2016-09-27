@@ -9,8 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.coursework.com.coursework.domain.Bird;
 import com.coursework.com.coursework.domain.Event;
+import com.coursework.com.coursework.domain.Kiddy;
 import com.coursework.helper.DBHelper;
 
 public class ViewActivity extends Activity {
@@ -21,20 +21,20 @@ public class ViewActivity extends Activity {
         setContentView(R.layout.activity_view);
         Intent intent = getIntent();
         myDb = new DBHelper(this);
-        Button btnDelete = (Button)this.findViewById(R.id.btnDeleteBird);
+        Button btnDelete = (Button)this.findViewById(R.id.btnDeleteKiddy);
         TextView txtViewId = (TextView)this.findViewById(R.id.txtViewId);
-        TextView txtViewBirdName = (TextView)this.findViewById(R.id.txtViewBirdName);
-        TextView txtViewLocation = (TextView)this.findViewById(R.id.txtViewBirdLocation);
-        TextView txtViewDateTime = (TextView)this.findViewById(R.id.txtViewBirdDateTime);
-        TextView txtViewWatcher = (TextView)this.findViewById(R.id.txtViewBirdWatcherName);
+        TextView txtViewKiddyActivityName = (TextView)this.findViewById(R.id.txtViewKiddyName);
+        TextView txtViewLocation = (TextView)this.findViewById(R.id.txtViewKiddyLocation);
+        TextView txtViewDateTime = (TextView)this.findViewById(R.id.txtViewKiddyDateTime);
+        TextView txtViewWatcher = (TextView)this.findViewById(R.id.txtViewKiddyReporterName);
         String birdIdString = intent.getStringExtra("birdId");
         final Integer id = Integer.parseInt(birdIdString);
-        Bird bird = myDb.getBirdData(id);
+        Kiddy kiddy = myDb.getKiddyData(id);
         txtViewId.setText(id.toString());
-        txtViewBirdName.setText("Name:" + bird.getBirdName());
-        txtViewLocation.setText("Location:" +bird.getLocation() );
-        txtViewDateTime.setText("Date time:" + bird.getDate() + " " +bird.getTime());
-        txtViewWatcher.setText("Watcher Name:" + bird.getWatcherName());
+        txtViewKiddyActivityName.setText("Activity Name:" + kiddy.getActivityName());
+        txtViewLocation.setText("Location:" +kiddy.getLocation() );
+        txtViewDateTime.setText("Date time:" + kiddy.getDate() + " " +kiddy.getTime());
+        txtViewWatcher.setText("Watcher Name:" + kiddy.getReporterName());
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,8 +42,8 @@ public class ViewActivity extends Activity {
                 event.setName("Delete bird id:" + id);
                 event.setDescription("Delete bird with id " + id + " successfully !!!");
                 myDb.insertEvent(event);
-                myDb.deleteBird(id);
-                Intent intent = new Intent(ViewActivity.this, ListBirdActivity.class);
+                myDb.deleteKiddy(id);
+                Intent intent = new Intent(ViewActivity.this, ListKiddyActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -53,7 +53,7 @@ public class ViewActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ViewActivity.this, AddReportActivity.class);
-                intent.putExtra("birdId",id + "");
+                intent.putExtra("kiddyId",id + "");
                 startActivity(intent);
                 finish();
             }
@@ -63,7 +63,7 @@ public class ViewActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ViewActivity.this,ViewReportActivity.class);
-                intent.putExtra("birdId",id + "");
+                intent.putExtra("kiddyId",id + "");
                 startActivity(intent);
                 finish();
             }

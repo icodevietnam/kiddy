@@ -27,40 +27,41 @@ public final class R {
         public static final int screen=0x7f020009;
     }
     public static final class id {
-        public static final int action_settings=0x7f080022;
-        public static final int btnAddReport=0x7f08001f;
+        public static final int action_settings=0x7f080023;
+        public static final int btnAddReport=0x7f080020;
         public static final int btnAddReportItem=0x7f080010;
         public static final int btnCourseWork3=0x7f080015;
-        public static final int btnDeleteBird=0x7f08001e;
+        public static final int btnDeleteKiddy=0x7f08001f;
         public static final int btnKiddyPage=0x7f080016;
         public static final int btnManageKiddyPage=0x7f080017;
         public static final int btnSave=0x7f08000a;
         public static final int btnSearch=0x7f080013;
-        public static final int btnViewReport=0x7f080020;
-        public static final int inputBirdName=0x7f080001;
-        public static final int inputDate=0x7f080005;
-        public static final int inputLocation=0x7f080003;
+        public static final int btnViewReport=0x7f080021;
         public static final int inputReportDescription=0x7f08000f;
         public static final int inputReportName=0x7f08000d;
         public static final int inputSearch=0x7f080012;
-        public static final int inputTimeSee=0x7f080007;
-        public static final int inputWatcherName=0x7f080009;
         public static final int listBird=0x7f080014;
         public static final int listEvent=0x7f080011;
-        public static final int listReport=0x7f080021;
-        public static final int txtBirdName=0x7f080000;
+        public static final int listReport=0x7f080022;
+        public static final int textActivityName=0x7f080001;
+        public static final int textDate=0x7f080005;
+        public static final int textLocation=0x7f080003;
+        public static final int textReporterName=0x7f080009;
+        public static final int textTime=0x7f080007;
         public static final int txtDate=0x7f080004;
+        public static final int txtKiddyName=0x7f080000;
         public static final int txtLocation=0x7f080002;
         public static final int txtMessage=0x7f08000b;
         public static final int txtReportDescription=0x7f08000e;
         public static final int txtReportName=0x7f08000c;
         public static final int txtTimeSee=0x7f080006;
         public static final int txtTitle=0x7f080018;
-        public static final int txtViewBirdDateTime=0x7f08001c;
-        public static final int txtViewBirdLocation=0x7f08001b;
-        public static final int txtViewBirdName=0x7f08001a;
-        public static final int txtViewBirdWatcherName=0x7f08001d;
+        public static final int txtViewBirdDateTime=0x7f08001d;
         public static final int txtViewId=0x7f080019;
+        public static final int txtViewKiddyDateTime=0x7f08001c;
+        public static final int txtViewKiddyLocation=0x7f08001b;
+        public static final int txtViewKiddyName=0x7f08001a;
+        public static final int txtViewKiddyReporterName=0x7f08001e;
         public static final int txtWatcherName=0x7f080008;
     }
     public static final class layout {
@@ -74,10 +75,10 @@ public final class R {
         public static final int activity_view_report=0x7f030007;
     }
     public static final class menu {
-        public static final int menu_add_bird=0x7f070000;
+        public static final int menu_add_kiddy=0x7f070000;
         public static final int menu_add_report=0x7f070001;
-        public static final int menu_list_bird=0x7f070002;
-        public static final int menu_list_event=0x7f070003;
+        public static final int menu_list_event=0x7f070002;
+        public static final int menu_list_kiddy=0x7f070003;
         public static final int menu_my_list=0x7f070004;
         public static final int menu_view=0x7f070005;
         public static final int menu_view_report=0x7f070006;

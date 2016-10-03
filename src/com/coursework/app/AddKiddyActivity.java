@@ -148,7 +148,19 @@ public class AddKiddyActivity extends Activity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                activityName = textActivityName.getText().toString();
+                location = textLocation.getText().toString();
+                String regex = "^\\d{2}-\\d{2}-\\d{4}$";
+                date = textDate.getText().toString();
+                String regexTime = "^\\d{2}:\\d{2}$";
+                time = textTime.getText().toString();
+                reporterName = textReporterName.getText().toString();
+                if(validateBlank(location,textLocation,MESSAGE_LOCATION_BLANK) && validateBlank(location,textLocation,MESSAGE_LOCATION_BLANK) &&
+                        validateDateTime(date,regex,textDate,MESSAGE_DATE_BLANK,MESSAGE_DATE_WRONG_FORMAT) && validateDateTime(time,regexTime,textTime,MESSAGE_TIME_BLANK,MESSAGE_TIME_WRONG_FORMAT) && validateDateTime(time,regex,textTime,MESSAGE_TIME_BLANK,MESSAGE_TIME_WRONG_FORMAT)    ) {
 
+                }else{
+
+                }
             }
         });
     }

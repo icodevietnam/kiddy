@@ -4,9 +4,9 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="122681083599655"
+    timestamp="35483930122479"
     token="-5975343444931965641"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
@@ -22,9 +22,23 @@
         duration="0" />
 
     <artifact
-        location="/media/DATA/kiddy/build/outputs/apk/kiddy-debug.apk"
-        type="MAIN" />
+        location="/media/DATA/kiddy/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+        type="RESOURCES" />
 
+    <build
+        timestamp="34768564352328"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/media/DATA/kiddy/build/outputs/apk/kiddy-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="35483930122479"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/media/DATA/kiddy/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+            type="RESOURCES" />
+    </build>
     <build
         timestamp="122681083599655"
         verifier="FULL_BUILD_REQUESTED" >

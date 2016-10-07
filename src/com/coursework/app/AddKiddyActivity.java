@@ -10,7 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.coursework.com.coursework.domain.Event;
+import com.coursework.com.coursework.domain.Kiddy;
 import com.coursework.helper.DBHelper;
 
 import java.text.SimpleDateFormat;
@@ -48,7 +51,7 @@ public class AddKiddyActivity extends Activity {
         Button btnSave = (Button)this.findViewById(R.id.btnSave);
         Date now = new Date();
         SimpleDateFormat sdfDate = new SimpleDateFormat("dd-MM-yyyy");
-        SimpleDateFormat sdfTime = new SimpleDateFormat("HH:mm:ss");
+        SimpleDateFormat sdfTime = new SimpleDateFormat("HH:mm");
         textDate.setText(sdfDate.format(now));
         textTime.setText(sdfTime.format(now));
 
@@ -156,10 +159,25 @@ public class AddKiddyActivity extends Activity {
                 time = textTime.getText().toString();
                 reporterName = textReporterName.getText().toString();
                 if(validateBlank(location,textLocation,MESSAGE_LOCATION_BLANK) && validateBlank(location,textLocation,MESSAGE_LOCATION_BLANK) &&
-                        validateDateTime(date,regex,textDate,MESSAGE_DATE_BLANK,MESSAGE_DATE_WRONG_FORMAT) && validateDateTime(time,regexTime,textTime,MESSAGE_TIME_BLANK,MESSAGE_TIME_WRONG_FORMAT) && validateDateTime(time,regex,textTime,MESSAGE_TIME_BLANK,MESSAGE_TIME_WRONG_FORMAT)    ) {
+                        validateDateTime(date,regex,textDate,MESSAGE_DATE_BLANK,MESSAGE_DATE_WRONG_FORMAT) && validateDateTime(time,regexTime,textTime,MESSAGE_TIME_BLANK,MESSAGE_TIME_WRONG_FORMAT) && validateBlank(reporterName,textReporterName,MESSAGE_REPORTER_NAME_BLANK)) {
+                    Kiddy kiddy = new Kiddy();
+                    kiddy.setActivityName(activityName);
+                    kiddy.setReporterName(reporterName);
+                    kiddy.setLocation(location);
+                    kiddy.setDate(date);
+                    kiddy.setTime(time);
 
+                    myDb.insertKiddy(kiddy);
+
+                    Event event = new Event();
+                    event.setName("Add Kid Activity " +kiddy.getActivityName() + " at " + kiddy.getDate() + " " +kiddy.getTime());
+                    event.setDescription("Activities action name: " + kiddy.getActivityName() + " in " + kiddy.getLocation() +" successfully !!!");
+                    myDb.insertEvent(event);
+                    Toast toast = Toast.makeText(getApplicationContext(), "Save successfully ", Toast.LENGTH_LONG);
+                    toast.show();
                 }else{
-
+                    Toast toast = Toast.makeText(getApplicationContext(), "It's remain errors", Toast.LENGTH_LONG);
+                    toast.show();
                 }
             }
         });
@@ -194,18 +212,18 @@ public class AddKiddyActivity extends Activity {
         return isValidate;
     }
 
-    private boolean validateDateTime(String value,String regex,EditText textDate,String msgBlank, String msgDateTime){
+    private boolean validateDateTime(String value,String regex,EditText textDateTime,String msgBlank, String msgDateTime){
         boolean isValidate =  false;
-        if(date.length()>0){
-            if(date.matches(regex)){
-                textDate.setError(null);
+        if(value.length()>0){
+            if(value.matches(regex)){
+                textDateTime.setError(null);
                 isValidate = true;
             }else {
-                textDate.setError(msgBlank);
+                textDateTime.setError(msgDateTime);
                 isValidate = false;
             }
         }else{
-            textDate.setError(msgBlank);
+            textDateTime.setError(msgBlank);
             isValidate = false;
         }
         return isValidate;

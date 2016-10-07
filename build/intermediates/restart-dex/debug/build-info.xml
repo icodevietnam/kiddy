@@ -4,40 +4,40 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="35483930122479"
+    timestamp="35936307804917"
     token="-5975343444931965641"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="2645" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="483" />
     <task
         name="verifier"
-        duration="0" />
+        duration="152" />
 
     <artifact
-        location="/media/DATA/kiddy/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-        type="RESOURCES" />
+        location="/media/DATA/kiddy/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="34768564352328"
+        timestamp="31934768979450"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/media/DATA/kiddy/build/outputs/apk/kiddy-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="35483930122479"
+        timestamp="35936307804917"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/media/DATA/kiddy/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
+            location="/media/DATA/kiddy/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+            type="DEX" />
     </build>
     <build
         timestamp="122681083599655"

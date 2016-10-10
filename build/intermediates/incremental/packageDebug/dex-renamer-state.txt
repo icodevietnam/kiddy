@@ -1,4 +1,4 @@
-#Fri Oct 07 18:16:49 ICT 2016
+#Mon Oct 10 11:21:13 ICT 2016
 base.0=/media/DATA/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_3632aaa4d8b3f0eb215c8193e8ff44f527b62148
 renamed.1=classes.dex
 renamed.0=classes2.dex

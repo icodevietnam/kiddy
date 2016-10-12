@@ -4,53 +4,47 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="6174834015194"
+    timestamp="127689110716068"
     token="-5975343444931965641"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1758" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="321" />
+        duration="0" />
     <task
         name="verifier"
-        duration="375" />
+        duration="0" />
 
     <artifact
         location="/media/DATA/kiddy/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
         type="RESOURCES" />
-    <artifact
-        location="/media/DATA/kiddy/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
-        type="DEX" />
 
     <build
-        timestamp="6023425547447"
+        timestamp="127195010084692"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/media/DATA/kiddy/build/outputs/apk/kiddy-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="6174834015194"
+        timestamp="127590736599264"
         verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/media/DATA/kiddy/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
         <artifact
             location="/media/DATA/kiddy/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
             type="DEX" />
     </build>
     <build
-        timestamp="122681083599655"
-        verifier="FULL_BUILD_REQUESTED" >
+        timestamp="127689110716068"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/media/DATA/kiddy/build/outputs/apk/kiddy-debug.apk"
-            type="MAIN" />
+            location="/media/DATA/kiddy/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

@@ -27,7 +27,7 @@ public class ViewActivity extends Activity {
         TextView txtViewLocation = (TextView)this.findViewById(R.id.txtViewKiddyLocation);
         TextView txtViewDateTime = (TextView)this.findViewById(R.id.txtViewKiddyDateTime);
         TextView txtViewWatcher = (TextView)this.findViewById(R.id.txtViewKiddyReporterName);
-        String birdIdString = intent.getStringExtra("birdId");
+        String birdIdString = intent.getStringExtra("kiddyId");
         final Integer id = Integer.parseInt(birdIdString);
         Kiddy kiddy = myDb.getKiddyData(id);
         txtViewId.setText(id.toString());

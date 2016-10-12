@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Sep 27 19:25:24 ICT 2016
+#Wed Oct 12 21:06:08 ICT 2016
 5.base=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_
 42.base=/media/DATA/kiddy/build/intermediates/assets/debug
 32.set=ANDROID_RESOURCE
@@ -31,7 +31,7 @@
 21.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/menu/menu_add_report.xml
 16.base=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_
 49.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/layout/activity_add_report.xml
-31.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/icon.png
+31.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/menu/menu_list_kiddy.xml
 24.set=ANDROID_RESOURCE
 25.file=/media/DATA/kiddy/build/intermediates/assets/debug/www/plugins/org.apache.cordova.device/www/device.js
 35.file=/media/DATA/kiddy/build/intermediates/assets/debug/www/fonts/glyphicons-halflings-regular.woff2
@@ -57,7 +57,7 @@
 17.base=/media/DATA/kiddy/build/intermediates/assets/debug
 27.set=ASSET
 count=53
-5.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/xml/config.xml
+5.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/menu/menu_list_event.xml
 27.base=/media/DATA/kiddy/build/intermediates/assets/debug
 42.file=/media/DATA/kiddy/build/intermediates/assets/debug/www/html5sql.js
 16.set=ANDROID_RESOURCE
@@ -70,7 +70,7 @@ count=53
 7.set=ANDROID_RESOURCE
 45.set=ASSET
 22.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/birds3.jpg
-32.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/menu/menu_list_kiddy.xml
+32.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/icon.png
 34.set=ASSET
 26.file=/media/DATA/kiddy/build/intermediates/assets/debug/www/js/bootstrap.min.js
 23.set=ANDROID_RESOURCE
@@ -98,7 +98,7 @@ count=53
 18.base=/media/DATA/kiddy/build/intermediates/assets/debug
 37.set=ANDROID_RESOURCE
 28.base=/media/DATA/kiddy/build/intermediates/assets/debug
-6.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/menu/menu_list_event.xml
+6.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/xml/config.xml
 10.base=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_
 43.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/layout/activity_view.xml
 26.set=ASSET

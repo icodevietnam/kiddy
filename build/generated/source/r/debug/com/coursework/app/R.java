@@ -27,21 +27,21 @@ public final class R {
         public static final int screen=0x7f020009;
     }
     public static final class id {
-        public static final int action_settings=0x7f080022;
-        public static final int btnAddReport=0x7f08001f;
+        public static final int action_settings=0x7f080021;
+        public static final int btnAddReport=0x7f08001e;
         public static final int btnAddReportItem=0x7f080010;
-        public static final int btnDeleteKiddy=0x7f08001e;
+        public static final int btnDeleteKiddy=0x7f08001d;
         public static final int btnKiddyPage=0x7f080015;
         public static final int btnManageKiddyPage=0x7f080016;
         public static final int btnSave=0x7f08000a;
         public static final int btnSearch=0x7f080013;
-        public static final int btnViewReport=0x7f080020;
+        public static final int btnViewReport=0x7f08001f;
         public static final int inputReportDescription=0x7f08000f;
         public static final int inputReportName=0x7f08000d;
         public static final int inputSearch=0x7f080012;
         public static final int listBird=0x7f080014;
         public static final int listEvent=0x7f080011;
-        public static final int listReport=0x7f080021;
+        public static final int listReport=0x7f080020;
         public static final int textActivityName=0x7f080001;
         public static final int textDate=0x7f080005;
         public static final int textLocation=0x7f080003;
@@ -55,12 +55,11 @@ public final class R {
         public static final int txtReportName=0x7f08000c;
         public static final int txtTimeSee=0x7f080006;
         public static final int txtTitle=0x7f080017;
-        public static final int txtViewBirdDateTime=0x7f08001c;
         public static final int txtViewId=0x7f080018;
         public static final int txtViewKiddyDateTime=0x7f08001b;
         public static final int txtViewKiddyLocation=0x7f08001a;
         public static final int txtViewKiddyName=0x7f080019;
-        public static final int txtViewKiddyReporterName=0x7f08001d;
+        public static final int txtViewKiddyReporterName=0x7f08001c;
         public static final int txtWatcherName=0x7f080008;
     }
     public static final class layout {

@@ -45,13 +45,13 @@ public class ListKiddyActivity extends Activity {
                 }
                 setAdapter(getApplicationContext(),values,listView);
                 Event event = new Event();
-                event.setName("Search something");
+                event.setName("Search " + inputSearch.getText().toString());
                 event.setDescription("Search " + inputSearch.getText().toString() + " successfully. Search Found: " + values.size() );
                 myDb.insertEvent(event);
             }
         });
         for(Kiddy kiddy:listKiddies){
-            String str =kiddy.getActivityName() + "-Name:" + kiddy.getActivityName() + "-Location:" +kiddy.getLocation() +"-Date:" +kiddy.getDate()+" " +kiddy.getTime();
+            String str =kiddy.getId() + "-Name:" + kiddy.getActivityName() + "-Location:" +kiddy.getLocation() +"-Date:" +kiddy.getDate()+" " +kiddy.getTime();
             values.add(str);
         }
 

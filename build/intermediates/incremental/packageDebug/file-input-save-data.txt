@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Sep 27 19:25:24 ICT 2016
+#Wed Oct 12 20:58:14 ICT 2016
 5.base=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_
 42.base=/media/DATA/kiddy/build/intermediates/assets/debug
 32.set=ASSET
@@ -90,7 +90,7 @@ count=65
 26.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/birds3.jpg
 64.base=/media/DATA/kiddy/build/intermediates/assets/debug
 23.set=ASSET
-36.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/icon.png
+36.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/menu/menu_list_kiddy.xml
 3.base=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_
 40.base=/media/DATA/kiddy/build/intermediates/assets/debug
 12.set=ANDROID_RESOURCE
@@ -139,7 +139,7 @@ count=65
 44.set=ANDROID_RESOURCE
 27.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/bird.jpg
 33.set=ASSET
-37.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/menu/menu_list_kiddy.xml
+37.file=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/icon.png
 4.base=/media/DATA/kiddy/build/intermediates/res/resources-debug.ap_
 41.base=/media/DATA/kiddy/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0
 22.set=ANDROID_RESOURCE

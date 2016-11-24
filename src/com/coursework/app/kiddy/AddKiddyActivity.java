@@ -1,7 +1,11 @@
-package com.coursework.app;
+package com.coursework.app.kiddy;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
@@ -28,7 +32,7 @@ public class AddKiddyActivity extends Activity {
     public  static final String MESSAGE_TIME_BLANK = "Time is not blank";
     public  static final String MESSAGE_TIME_WRONG_FORMAT = "Time is wrong format";
     public  static final String MESSAGE_REPORTER_NAME_BLANK = "Reporter Name is not blank";
-
+    private static int RESULT_LOAD_IMAGE = 1;
 
     private DBHelper myDb;
     private String activityName;
@@ -36,6 +40,7 @@ public class AddKiddyActivity extends Activity {
     private String date;
     private String time;
     private String reporterName;
+    private String imagePath = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +52,7 @@ public class AddKiddyActivity extends Activity {
         final EditText textTime = (EditText)this.findViewById(R.id.textTime);
         final EditText textReporterName = (EditText)this.findViewById(R.id.textReporterName);
         final TextView message = (TextView)this.findViewById(R.id.txtMessage);
+        final Button btnLoadImage = (Button)this.findViewById(R.id.btnLoadImage);
         myDb = new DBHelper(this);
         Button btnSave = (Button)this.findViewById(R.id.btnSave);
         Date now = new Date();
@@ -181,9 +187,42 @@ public class AddKiddyActivity extends Activity {
                 }
             }
         });
+
+        btnLoadImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(intent, RESULT_LOAD_IMAGE);
+
+            }
+        });
     }
 
-    private boolean validateActivityName(String activityName,EditText textActivityName){
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && null != data) {
+            Uri selectedImage = data.getData();
+            String[] filePathColumn = { MediaStore.Images.Media.DATA };
+
+            Cursor cursor = getContentResolver().query(selectedImage,
+                    filePathColumn, null, null, null);
+            cursor.moveToFirst();
+
+            int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+            String picturePath = cursor.getString(columnIndex);
+            cursor.close();
+
+            Toast toast = Toast.makeText(getApplicationContext(),picturePath, Toast.LENGTH_LONG);
+            toast.show();
+
+//            ImageView imageView = (ImageView) findViewById(R.id.imgView);
+//            imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
+
+        }
+    }
+
+    private boolean validateActivityName(String activityName, EditText textActivityName){
         boolean isValidate =  false;
         if(activityName.length()>0){
             if(myDb.checkKiddyDuplicate(activityName)){

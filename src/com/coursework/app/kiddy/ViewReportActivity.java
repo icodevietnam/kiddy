@@ -1,4 +1,4 @@
-package com.coursework.app;
+package com.coursework.app.kiddy;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,7 +8,6 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.coursework.com.coursework.domain.Event;
 import com.coursework.com.coursework.domain.Report;
 import com.coursework.helper.DBHelper;
 

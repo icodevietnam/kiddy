@@ -1,4 +1,4 @@
-package com.coursework.app;
+package com.coursework.app.kiddy;
 
 import android.app.Activity;
 import android.os.Bundle;

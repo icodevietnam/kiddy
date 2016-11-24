@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.coursework.app;
+package com.coursework.app.kiddy;
 
 import android.content.Intent;
 import android.os.Bundle;

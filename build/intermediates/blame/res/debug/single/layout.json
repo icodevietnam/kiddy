@@ -1,34 +1,34 @@
 [
     {
-        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/layout/activity_main.xml",
-        "source": "/media/DATA/kiddy/res/layout/activity_main.xml"
+        "merged": "/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/res/merged/debug/layout/activity_add_kiddy.xml",
+        "source": "/Users/tuantuphan/Desktop/iDiscovery/res/layout/activity_add_kiddy.xml"
     },
     {
-        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/layout/activity_view.xml",
-        "source": "/media/DATA/kiddy/res/layout/activity_view.xml"
+        "merged": "/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/res/merged/debug/layout/activity_add_report.xml",
+        "source": "/Users/tuantuphan/Desktop/iDiscovery/res/layout/activity_add_report.xml"
     },
     {
-        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/layout/activity_list_kiddy.xml",
-        "source": "/media/DATA/kiddy/res/layout/activity_list_kiddy.xml"
+        "merged": "/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/res/merged/debug/layout/activity_view.xml",
+        "source": "/Users/tuantuphan/Desktop/iDiscovery/res/layout/activity_view.xml"
     },
     {
-        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/layout/activity_my_list.xml",
-        "source": "/media/DATA/kiddy/res/layout/activity_my_list.xml"
+        "merged": "/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/res/merged/debug/layout/activity_list_event.xml",
+        "source": "/Users/tuantuphan/Desktop/iDiscovery/res/layout/activity_list_event.xml"
     },
     {
-        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/layout/activity_list_event.xml",
-        "source": "/media/DATA/kiddy/res/layout/activity_list_event.xml"
+        "merged": "/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/res/merged/debug/layout/activity_view_report.xml",
+        "source": "/Users/tuantuphan/Desktop/iDiscovery/res/layout/activity_view_report.xml"
     },
     {
-        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/layout/activity_view_report.xml",
-        "source": "/media/DATA/kiddy/res/layout/activity_view_report.xml"
+        "merged": "/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/res/merged/debug/layout/activity_list_kiddy.xml",
+        "source": "/Users/tuantuphan/Desktop/iDiscovery/res/layout/activity_list_kiddy.xml"
     },
     {
-        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/layout/activity_add_report.xml",
-        "source": "/media/DATA/kiddy/res/layout/activity_add_report.xml"
+        "merged": "/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/tuantuphan/Desktop/iDiscovery/res/layout/activity_main.xml"
     },
     {
-        "merged": "/media/DATA/kiddy/build/intermediates/res/merged/debug/layout/activity_add_kiddy.xml",
-        "source": "/media/DATA/kiddy/res/layout/activity_add_kiddy.xml"
+        "merged": "/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/res/merged/debug/layout/activity_my_list.xml",
+        "source": "/Users/tuantuphan/Desktop/iDiscovery/res/layout/activity_my_list.xml"
     }
 ]

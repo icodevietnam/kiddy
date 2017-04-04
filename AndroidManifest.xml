@@ -32,7 +32,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true" >
         <activity
-            android:name=".MainActivity"
+            android:name=".iDiscovery.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
             android:label="@string/activity_name"
             android:launchMode="singleTop"
@@ -45,27 +45,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AddKiddyActivity"
+            android:name=".iDiscovery.AddIDiscoveryActivity"
             android:label="AddKiddyActivity" >
         </activity>
         <activity
-            android:name=".ListKiddyActivity"
-            android:label="ListKiddyActivity" >
+            android:name=".iDiscovery.ListIDiscoveryActivity"
+            android:label="ListIDiscoveryActivity" >
         </activity>
         <activity
-            android:name=".ViewActivity"
+            android:name=".iDiscovery.ViewActivity"
             android:label="@string/title_activity_view" >
         </activity>
         <activity
-            android:name=".ListEventActivity"
+            android:name=".iDiscovery.ListEventActivity"
             android:label="@string/title_activity_list_event" >
         </activity>
         <activity
-            android:name=".AddReportActivity"
+            android:name=".iDiscovery.AddReportActivity"
             android:label="@string/title_activity_add_report" >
         </activity>
         <activity
-            android:name=".ViewReportActivity"
+            android:name=".iDiscovery.ViewReportActivity"
             android:label="@string/title_activity_view_report" >
         </activity>
     </application>

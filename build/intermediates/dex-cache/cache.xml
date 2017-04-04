@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/media/DATA/kiddy/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="2640a7afac9fefed128374df388c4782ecf333fd">
-        <dex dex="/media/DATA/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_3632aaa4d8b3f0eb215c8193e8ff44f527b62148/classes.dex" />
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_04cb3e516ed9f6886edba9da3de640a65693a7ff/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/media/DATA/kiddy/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="09ef7a5a7b79bc9cf5d94245ffafb06795d8d932">
-        <dex dex="/media/DATA/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c28e0aac477375d39d2ec564e593bcf9273f2090/classes.dex" />
+        revision="25.0.2"
+        sha1="4c2e7d7b9ed4f4e487133f7b5c93151d4f7998fb">
+        <dex dex="/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b5462f1c4cfa68d1232b5b274aaf5bc5744c6c49/classes.dex" />
     </item>
 
 </items>

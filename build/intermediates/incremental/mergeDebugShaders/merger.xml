@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/media/DATA/kiddy/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/media/DATA/kiddy/src/debug/shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/tuantuphan/Desktop/iDiscovery/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/tuantuphan/Desktop/iDiscovery/src/debug/shaders"/></dataSet></merger>

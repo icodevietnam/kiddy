@@ -18,7 +18,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Activity Name:"
         android:id="@+id/txtKiddyName"
-        android:layout_marginTop="-10dp"
+        android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
         android:textColor="#fffcfd"
         android:textSize="30sp" />
@@ -132,17 +132,6 @@
         android:layout_centerHorizontal="true" />
 
 
-    <Button
-        android:id="@+id/btnSave"
-        android:text="Save Activity Name"
-        android:textColor="#000000"
-        android:textSize="25dp"
-        android:layout_below="@+id/textReporterName"
-        android:layout_height="60dp"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="300dp" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -151,6 +140,26 @@
         android:layout_below="@+id/btnSave"
         android:id="@+id/txtMessage"
         android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Load Image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLoadImage"
+        android:layout_below="@+id/textReporterName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:text="Save Activity Name"
+        android:textColor="#000000"
+        android:textSize="17dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/btnLoadImage"
         android:layout_centerHorizontal="true" />
 
 

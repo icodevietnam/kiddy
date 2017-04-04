@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/media/DATA/kiddy/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+        "outputFile": "/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "/media/DATA/kiddy/res/values/dimens.xml",
+                    "file": "/Users/tuantuphan/Desktop/iDiscovery/res/values/dimens.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "/media/DATA/kiddy/res/values/dimens.xml",
+                    "file": "/Users/tuantuphan/Desktop/iDiscovery/res/values/dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,13 +49,13 @@
                     "endOffset": 217
                 },
                 "from": {
-                    "file": "/media/DATA/kiddy/res/values/strings.xml",
+                    "file": "/Users/tuantuphan/Desktop/iDiscovery/res/values/strings.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 531,
+                        "startOffset": 536,
                         "endColumn": 52,
-                        "endOffset": 579
+                        "endOffset": 584
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 281
                 },
                 "from": {
-                    "file": "/media/DATA/kiddy/res/values/strings.xml",
+                    "file": "/Users/tuantuphan/Desktop/iDiscovery/res/values/strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 347,
+                        "startOffset": 352,
                         "endColumn": 63,
-                        "endOffset": 406
+                        "endOffset": 411
                     }
                 }
             },
@@ -83,17 +83,17 @@
                     "startLine": 6,
                     "startColumn": 4,
                     "startOffset": 286,
-                    "endColumn": 42,
-                    "endOffset": 324
+                    "endColumn": 47,
+                    "endOffset": 329
                 },
                 "from": {
-                    "file": "/media/DATA/kiddy/res/values/strings.xml",
+                    "file": "/Users/tuantuphan/Desktop/iDiscovery/res/values/strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
                         "startOffset": 148,
-                        "endColumn": 42,
-                        "endOffset": 186
+                        "endColumn": 47,
+                        "endOffset": 191
                     }
                 }
             },
@@ -101,18 +101,18 @@
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 329,
+                    "startOffset": 334,
                     "endColumn": 52,
-                    "endOffset": 377
+                    "endOffset": 382
                 },
                 "from": {
-                    "file": "/media/DATA/kiddy/res/values/strings.xml",
+                    "file": "/Users/tuantuphan/Desktop/iDiscovery/res/values/strings.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 478,
+                        "startOffset": 483,
                         "endColumn": 52,
-                        "endOffset": 526
+                        "endOffset": 531
                     }
                 }
             },
@@ -120,18 +120,18 @@
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 382,
+                    "startOffset": 387,
                     "endColumn": 58,
-                    "endOffset": 436
+                    "endOffset": 441
                 },
                 "from": {
-                    "file": "/media/DATA/kiddy/res/values/strings.xml",
+                    "file": "/Users/tuantuphan/Desktop/iDiscovery/res/values/strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 237,
+                        "startOffset": 242,
                         "endColumn": 58,
-                        "endOffset": 291
+                        "endOffset": 296
                     }
                 }
             },
@@ -139,18 +139,18 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 441,
+                    "startOffset": 446,
                     "endColumn": 67,
-                    "endOffset": 504
+                    "endOffset": 509
                 },
                 "from": {
-                    "file": "/media/DATA/kiddy/res/values/strings.xml",
+                    "file": "/Users/tuantuphan/Desktop/iDiscovery/res/values/strings.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 584,
+                        "startOffset": 589,
                         "endColumn": 67,
-                        "endOffset": 647
+                        "endOffset": 652
                     }
                 }
             },
@@ -158,18 +158,18 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 509,
+                    "startOffset": 514,
                     "endColumn": 71,
-                    "endOffset": 576
+                    "endOffset": 581
                 },
                 "from": {
-                    "file": "/media/DATA/kiddy/res/values/strings.xml",
+                    "file": "/Users/tuantuphan/Desktop/iDiscovery/res/values/strings.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 855,
+                        "startOffset": 860,
                         "endColumn": 71,
-                        "endOffset": 922
+                        "endOffset": 927
                     }
                 }
             },
@@ -177,18 +177,18 @@
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 581,
+                    "startOffset": 586,
                     "endColumn": 69,
-                    "endOffset": 646
+                    "endOffset": 651
                 },
                 "from": {
-                    "file": "/media/DATA/kiddy/res/values/strings.xml",
+                    "file": "/Users/tuantuphan/Desktop/iDiscovery/res/values/strings.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 652,
+                        "startOffset": 657,
                         "endColumn": 69,
-                        "endOffset": 717
+                        "endOffset": 722
                     }
                 }
             },
@@ -196,18 +196,18 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 651,
+                    "startOffset": 656,
                     "endColumn": 71,
-                    "endOffset": 718
+                    "endOffset": 723
                 },
                 "from": {
-                    "file": "/media/DATA/kiddy/res/values/strings.xml",
+                    "file": "/Users/tuantuphan/Desktop/iDiscovery/res/values/strings.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 783,
+                        "startOffset": 788,
                         "endColumn": 71,
-                        "endOffset": 850
+                        "endOffset": 855
                     }
                 }
             },
@@ -215,18 +215,18 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 723,
+                    "startOffset": 728,
                     "endColumn": 65,
-                    "endOffset": 784
+                    "endOffset": 789
                 },
                 "from": {
-                    "file": "/media/DATA/kiddy/res/values/strings.xml",
+                    "file": "/Users/tuantuphan/Desktop/iDiscovery/res/values/strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 411,
+                        "startOffset": 416,
                         "endColumn": 65,
-                        "endOffset": 472
+                        "endOffset": 477
                     }
                 }
             },
@@ -234,18 +234,18 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 789,
+                    "startOffset": 794,
                     "endColumn": 60,
-                    "endOffset": 845
+                    "endOffset": 850
                 },
                 "from": {
-                    "file": "/media/DATA/kiddy/res/values/strings.xml",
+                    "file": "/Users/tuantuphan/Desktop/iDiscovery/res/values/strings.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 722,
+                        "startOffset": 727,
                         "endColumn": 60,
-                        "endOffset": 778
+                        "endOffset": 783
                     }
                 }
             },
@@ -253,18 +253,18 @@
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 850,
+                    "startOffset": 855,
                     "endColumn": 73,
-                    "endOffset": 919
+                    "endOffset": 924
                 },
                 "from": {
-                    "file": "/media/DATA/kiddy/res/values/strings.xml",
+                    "file": "/Users/tuantuphan/Desktop/iDiscovery/res/values/strings.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 927,
+                        "startOffset": 932,
                         "endColumn": 73,
-                        "endOffset": 996
+                        "endOffset": 1001
                     }
                 }
             }

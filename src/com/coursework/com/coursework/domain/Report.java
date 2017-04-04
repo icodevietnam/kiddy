@@ -4,7 +4,7 @@ public class Report {
     private Integer id;
     private String name;
     private String description;
-    private String kiddyId;
+    private String iDiscoveryId;
 
 
     public Integer getId() {
@@ -31,11 +31,11 @@ public class Report {
         this.description = description;
     }
 
-    public String getKiddyId() {
-        return kiddyId;
+    public String getIDiscoveryIdId() {
+        return iDiscoveryId;
     }
 
-    public void setKiddyId(String kiddyId) {
-        this.kiddyId = kiddyId;
+    public void setIDiscoveryId(String iDiscoveryId) {
+        this.iDiscoveryId = iDiscoveryId;
     }
 }

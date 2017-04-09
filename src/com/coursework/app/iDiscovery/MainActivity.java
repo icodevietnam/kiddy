@@ -22,6 +22,8 @@ package com.coursework.app.iDiscovery;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import com.coursework.app.R;
 
@@ -29,6 +31,8 @@ import org.apache.cordova.*;
 
 public class MainActivity extends CordovaActivity
 {
+    private WebView webView;
+
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -38,6 +42,7 @@ public class MainActivity extends CordovaActivity
         setContentView(R.layout.activity_main);
         Button btnBirdPage = (Button)this.findViewById(R.id.btnKiddyPage);
         Button btnManageBirdPage = (Button)this.findViewById(R.id.btnManageKiddyPage);
+        Button btnPhoneGap = (Button)this.findViewById(R.id.btnPhoneGap);
         btnBirdPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +59,15 @@ public class MainActivity extends CordovaActivity
             }
         });
 
+        btnPhoneGap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                webView =  (WebView) findViewById(R.id.webView);
+                webView.setWebViewClient(new WebViewClient());
+                webView.getSettings().setJavaScriptEnabled(true);
+                webView.loadUrl("http://www.vnexpress.net");
+            }
+        });
 
 
     }

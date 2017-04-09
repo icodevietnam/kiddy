@@ -3,7 +3,7 @@
     package="com.coursework.app"
     android:hardwareAccelerated="true"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -21,24 +21,23 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
-
-    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:hardwareAccelerated="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:supportsRtl="true" >
+        android:supportsRtl="true">
         <activity
             android:name=".iDiscovery.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
             android:label="@string/activity_name"
             android:launchMode="singleTop"
             android:theme="@android:style/Theme.Black.NoTitleBar"
-            android:windowSoftInputMode="adjustResize" >
-            <intent-filter android:label="@string/launcher_name" >
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter android:label="@string/launcher_name">
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -46,28 +45,23 @@
         </activity>
         <activity
             android:name=".iDiscovery.AddIDiscoveryActivity"
-            android:label="AddKiddyActivity" >
-        </activity>
+            android:label="AddKiddyActivity"></activity>
         <activity
             android:name=".iDiscovery.ListIDiscoveryActivity"
-            android:label="ListIDiscoveryActivity" >
-        </activity>
+            android:label="ListIDiscoveryActivity"></activity>
         <activity
             android:name=".iDiscovery.ViewActivity"
-            android:label="@string/title_activity_view" >
-        </activity>
+            android:label="@string/title_activity_view"></activity>
         <activity
             android:name=".iDiscovery.ListEventActivity"
-            android:label="@string/title_activity_list_event" >
-        </activity>
+            android:label="@string/title_activity_list_event"></activity>
         <activity
             android:name=".iDiscovery.AddReportActivity"
-            android:label="@string/title_activity_add_report" >
-        </activity>
+            android:label="@string/title_activity_add_report"></activity>
         <activity
             android:name=".iDiscovery.ViewReportActivity"
-            android:label="@string/title_activity_view_report" >
-        </activity>
+            android:label="@string/title_activity_view_report"></activity>
+        <activity android:name=".iDiscovery.WebViewActivity"></activity>
     </application>
 
 </manifest>

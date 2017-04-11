@@ -62,10 +62,8 @@ public class MainActivity extends CordovaActivity
         btnPhoneGap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                webView =  (WebView) findViewById(R.id.webView);
-                webView.setWebViewClient(new WebViewClient());
-                webView.getSettings().setJavaScriptEnabled(true);
-                webView.loadUrl("http://www.vnexpress.net");
+                Intent intent = new Intent(MainActivity.this,WebViewActivity.class);
+                startActivity(intent);
             }
         });
 

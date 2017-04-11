@@ -36,41 +36,36 @@ var app = {
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    },
+//    receivedEvent: function(id) {
+//        var parentElement = document.getElementById(id);
+//        var listeningElement = parentElement.querySelector('.listening');
+//        var receivedElement = parentElement.querySelector('.received');
+//
+//        listeningElement.setAttribute('style', 'display:none;');
+//        receivedElement.setAttribute('style', 'display:block;');
+//
+//        console.log('Received Event: ' + id);
+//    },
     onDeviceReady: function() {
          window.plugins.toast.showLongBottom('Use the back button to return to main.');
-         document.getElementById("btnAdd").addEventListener("click", app.addItem);
-         document.getElementById("btnToast").addEventListener("click", app.showToast);
-         document.getElementById("btnDeviceInfo").addEventListener("click", app.showDeviceInfo);
-         document.getElementById("btnUrl").addEventListener("click", app.openWeb);
+         document.getElementById("insertEvent").addEventListener("click", app.addEvent);
+         document.getElementById("listEvent").addEventListener("click", app.listEvent);
          app.receivedEvent('deviceready');
       },
-    addItem: function() {
-        console.log("Plugin ADD ITEM CALLED " + HybridBridge);
-        var item = document.getElementById("bookmark").value;
-        HybridBridge.addItem(item,function(){console.log("Hybrid Bridge Success")},function(e){console.log("Hybrid Bridge Error" + e)});
+    addEvent: function() {
+          var url = "http://phonegap.com";
+          location.herf(url);
+//        var item = document.getElementById("bookmark").value;
+//        HybridBridge.addItem(item,function(){console.log("Hybrid Bridge Success")},function(e){console.log("Hybrid Bridge Error" + e)});
      },
-     showDeviceInfo: function(){
-        var message = 'Cordova version: ' + device.cordova;
-        message += '\n\nDevice Model: ' + device.model;
-        message += '\n\nDevice Version (Android): ' + device.version;
-        alert(message);
-     },
-     showToast: function(){
-        window.plugins.toast.showShortCenter('PHONEGAP IS AWESOME!!!');
-     },
+     listEvent: function() {
+          alert("List Event");
+     //        var item = document.getElementById("bookmark").value;
+     //        HybridBridge.addItem(item,function(){console.log("Hybrid Bridge Success")},function(e){console.log("Hybrid Bridge Error" + e)});
+          },
      openWeb: function(){
-        var url = "http://phonegap.com"
-        window.open(url)
+        var url = "http://phonegap.com";
+        window.open(url);
      }
 };
 

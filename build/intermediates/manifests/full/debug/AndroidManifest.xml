@@ -45,28 +45,23 @@
         </activity>
         <activity
             android:name="com.coursework.app.iDiscovery.AddIDiscoveryActivity"
-            android:label="AddKiddyActivity" >
-        </activity>
+            android:label="AddKiddyActivity" />
         <activity
             android:name="com.coursework.app.iDiscovery.ListIDiscoveryActivity"
-            android:label="ListIDiscoveryActivity" >
-        </activity>
+            android:label="ListIDiscoveryActivity" />
         <activity
             android:name="com.coursework.app.iDiscovery.ViewActivity"
-            android:label="@string/title_activity_view" >
-        </activity>
+            android:label="@string/title_activity_view" />
         <activity
             android:name="com.coursework.app.iDiscovery.ListEventActivity"
-            android:label="@string/title_activity_list_event" >
-        </activity>
+            android:label="@string/title_activity_list_event" />
         <activity
             android:name="com.coursework.app.iDiscovery.AddReportActivity"
-            android:label="@string/title_activity_add_report" >
-        </activity>
+            android:label="@string/title_activity_add_report" />
         <activity
             android:name="com.coursework.app.iDiscovery.ViewReportActivity"
-            android:label="@string/title_activity_view_report" >
-        </activity>
+            android:label="@string/title_activity_view_report" />
+        <activity android:name="com.coursework.app.iDiscovery.WebViewActivity" />
     </application>
 
 </manifest>

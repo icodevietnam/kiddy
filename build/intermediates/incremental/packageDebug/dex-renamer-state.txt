@@ -1,7 +1,7 @@
-#Mon Apr 03 06:02:00 CEST 2017
-base.0=/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b5462f1c4cfa68d1232b5b274aaf5bc5744c6c49
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_04cb3e516ed9f6886edba9da3de640a65693a7ff/classes.dex
-base.1=/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_04cb3e516ed9f6886edba9da3de640a65693a7ff
-file.0=/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b5462f1c4cfa68d1232b5b274aaf5bc5744c6c49/classes.dex
+#Wed Apr 12 08:23:25 CEST 2017
+base.0=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_15c23d8b7452a27084eac031ab4428400905bf45
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_85252fa72b1933568597ffa2cc3f76379141ae70/classes.dex
+base.1=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_85252fa72b1933568597ffa2cc3f76379141ae70
+file.0=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_15c23d8b7452a27084eac031ab4428400905bf45/classes.dex

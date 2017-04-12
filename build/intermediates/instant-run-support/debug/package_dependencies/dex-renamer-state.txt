@@ -1,0 +1,19 @@
+#Tue Apr 11 21:49:08 CEST 2017
+renamed.5=classes4.dex
+renamed.4=classes6.dex
+renamed.3=classes2.dex
+renamed.2=classes.dex
+renamed.1=classes5.dex
+renamed.0=classes3.dex
+base.5=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_63fddf153e138315515ce21f4ccb41b6e61c4b0e
+base.4=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.2.1_a68618dbcc0f5e44145d68b1da6fa730f579d2ca
+base.3=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ae820e632a013a33b75162cc513d562877857c5c
+base.2=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1cc6a16dd08542be26b1542dbd49360cc21287ee
+base.1=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.2.1_d4d2ac3c1f6d8a43396517d9a3cc651ac9e67a7b
+base.0=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f2b9161d22cfb235996b3e05ff4d0b241abf21c6
+file.5=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_63fddf153e138315515ce21f4ccb41b6e61c4b0e/classes.dex
+file.4=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.2.1_a68618dbcc0f5e44145d68b1da6fa730f579d2ca/classes.dex
+file.3=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ae820e632a013a33b75162cc513d562877857c5c/classes.dex
+file.2=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1cc6a16dd08542be26b1542dbd49360cc21287ee/classes.dex
+file.1=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.2.1_d4d2ac3c1f6d8a43396517d9a3cc651ac9e67a7b/classes.dex
+file.0=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f2b9161d22cfb235996b3e05ff4d0b241abf21c6/classes.dex

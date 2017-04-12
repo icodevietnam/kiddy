@@ -53,20 +53,11 @@ var app = {
          app.receivedEvent('deviceready');
       },
     addEvent: function() {
-          var url = "http://phonegap.com";
-          location.herf(url);
-//        var item = document.getElementById("bookmark").value;
-//        HybridBridge.addItem(item,function(){console.log("Hybrid Bridge Success")},function(e){console.log("Hybrid Bridge Error" + e)});
-     },
-     listEvent: function() {
-          alert("List Event");
-     //        var item = document.getElementById("bookmark").value;
-     //        HybridBridge.addItem(item,function(){console.log("Hybrid Bridge Success")},function(e){console.log("Hybrid Bridge Error" + e)});
-          },
-     openWeb: function(){
-        var url = "http://phonegap.com";
-        window.open(url);
-     }
+        window.location="insertEvent.html";
+    },
+    listEvent: function() {
+        window.location="listEvent.html";
+    },
 };
 
 app.initialize();

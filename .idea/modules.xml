@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CordovaLib/CordovaLib.iml" filepath="$PROJECT_DIR$/CordovaLib/CordovaLib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/iDiscovery.iml" filepath="$PROJECT_DIR$/iDiscovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kiddy.iml" filepath="$PROJECT_DIR$/kiddy.iml" />
     </modules>
   </component>
 </project>

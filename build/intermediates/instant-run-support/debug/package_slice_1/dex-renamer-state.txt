@@ -1,4 +1,4 @@
-#Mon Apr 03 06:02:00 CEST 2017
-base.0=/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1
+#Tue Apr 11 22:12:57 CEST 2017
+base.0=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1
 renamed.0=classes.dex
-file.0=/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex
+file.0=/Users/tuantuphan/Desktop/kiddy/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex

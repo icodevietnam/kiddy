@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/tuantuphan/Desktop/iDiscovery/CordovaLib/assets"/><source path="/Users/tuantuphan/Desktop/iDiscovery/CordovaLib/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Users/tuantuphan/Desktop/iDiscovery/CordovaLib/src/debug/assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/tuantuphan/Desktop/kiddy/CordovaLib/assets"/><source path="/Users/tuantuphan/Desktop/kiddy/CordovaLib/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Users/tuantuphan/Desktop/kiddy/CordovaLib/src/debug/assets"/></dataSet></merger>

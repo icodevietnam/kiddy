@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/res/merged/debug/drawable-land-hdpi/screen.png",
-        "source": "/Users/tuantuphan/Desktop/iDiscovery/res/drawable-land-hdpi/screen.png"
+        "merged": "/Users/tuantuphan/Desktop/kiddy/build/intermediates/res/merged/debug/drawable-land-hdpi/icon.png",
+        "source": "/Users/tuantuphan/Desktop/kiddy/res/drawable-land-hdpi/icon.png"
     },
     {
-        "merged": "/Users/tuantuphan/Desktop/iDiscovery/build/intermediates/res/merged/debug/drawable-land-hdpi/icon.png",
-        "source": "/Users/tuantuphan/Desktop/iDiscovery/res/drawable-land-hdpi/icon.png"
+        "merged": "/Users/tuantuphan/Desktop/kiddy/build/intermediates/res/merged/debug/drawable-land-hdpi/screen.png",
+        "source": "/Users/tuantuphan/Desktop/kiddy/res/drawable-land-hdpi/screen.png"
     }
 ]

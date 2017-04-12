@@ -3,6 +3,7 @@ package com.coursework.app.iDiscovery;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.webkit.WebChromeClient;
 
 import com.coursework.app.R;
 

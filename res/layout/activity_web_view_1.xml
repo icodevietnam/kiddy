@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".iDiscovery.ListEventWebViewActivity">
+    tools:context=".iDiscovery.InsertEventWebViewActivity">
 
     <org.apache.cordova.engine.SystemWebView
-        android:id="@+id/cordovaWebView"
+        android:id="@+id/cordovaWebView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />

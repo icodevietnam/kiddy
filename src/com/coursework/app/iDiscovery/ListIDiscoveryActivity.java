@@ -27,11 +27,11 @@ public class ListIDiscoveryActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_kiddy);
+        setContentView(R.layout.activity_list_idiscovery);
         myDb = new DBHelper(this);
         // Get ListView
         listView = (ListView)this.findViewById(R.id.listBird);
-        List<iDiscovery> listKiddies = myDb.getAllKiddies();
+        List<iDiscovery> listDiscoveries = myDb.getAlliDiscoveries();
         final ArrayList<String> values = new ArrayList<String>();
         final EditText inputSearch = (EditText)this.findViewById(R.id.inputSearch);
         Button btnSearch = (Button)this.findViewById(R.id.btnSearch);
@@ -51,7 +51,7 @@ public class ListIDiscoveryActivity extends Activity {
                 myDb.insertEvent(event);
             }
         });
-        for(iDiscovery iDiscovery :listKiddies){
+        for(iDiscovery iDiscovery :listDiscoveries){
             String str = iDiscovery.getId() + "-Name:" + iDiscovery.getActivityName() + "-Location:" + iDiscovery.getLocation() +"-Date:" + iDiscovery.getDate()+" " + iDiscovery.getTime();
             values.add(str);
         }
@@ -75,7 +75,7 @@ public class ListIDiscoveryActivity extends Activity {
                 // Show Alert
                 String[] arrayStr = itemValue.split("-");
                 Intent intent = new Intent(ListIDiscoveryActivity.this, ViewActivity.class);
-                intent.putExtra("kiddyId", arrayStr[0]);
+                intent.putExtra("iDiscoveryId", arrayStr[0]);
                 startActivity(intent);
             }
         });
@@ -84,7 +84,7 @@ public class ListIDiscoveryActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_list_kiddy, menu);
+        getMenuInflater().inflate(R.menu.menu_list_idiscovery, menu);
         return true;
     }
 

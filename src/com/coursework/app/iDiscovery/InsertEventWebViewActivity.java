@@ -1,9 +1,7 @@
 package com.coursework.app.iDiscovery;
 
-import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.webkit.WebChromeClient;
 
 import com.coursework.app.R;
 
@@ -13,20 +11,20 @@ import org.apache.cordova.CordovaWebViewImpl;
 import org.apache.cordova.engine.SystemWebView;
 import org.apache.cordova.engine.SystemWebViewEngine;
 
-public class WebViewActivity extends CordovaActivity {
+public class InsertEventWebViewActivity extends CordovaActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_web_view);
+        setContentView(R.layout.activity_web_view_1);
         super.init();
-        launchUrl = "file:///android_asset/www/index.html";
+        launchUrl = "file:///android_asset/www/insertEvent.html";
         loadUrl(launchUrl);
     }
 
     @Override
     protected CordovaWebView makeWebView() {
-        SystemWebView webView = (SystemWebView)findViewById(R.id.cordovaWebView);
+        SystemWebView webView = (SystemWebView)findViewById(R.id.cordovaWebView1);
         return new CordovaWebViewImpl(new SystemWebViewEngine(webView));
     }
 

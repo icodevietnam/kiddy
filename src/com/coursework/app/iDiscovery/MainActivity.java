@@ -23,7 +23,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 import com.coursework.app.R;
 
@@ -40,9 +39,11 @@ public class MainActivity extends CordovaActivity
         // Set by <content src="index.html" /> in config.xml
         //loadUrl(launchUrl);
         setContentView(R.layout.activity_main);
-        Button btnBirdPage = (Button)this.findViewById(R.id.btnKiddyPage);
-        Button btnManageBirdPage = (Button)this.findViewById(R.id.btnManageKiddyPage);
-        Button btnPhoneGap = (Button)this.findViewById(R.id.btnPhoneGap);
+        Button btnBirdPage = (Button)this.findViewById(R.id.btniDiscoveryPage);
+        Button btnManageBirdPage = (Button)this.findViewById(R.id.btnManageiDiscoveryPage);
+        Button btnListEventPG = (Button)this.findViewById(R.id.btnListEventPG);
+        Button btnInsertEventPG = (Button)this.findViewById(R.id.btnInsertEventPG);
+
         btnBirdPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,14 +60,21 @@ public class MainActivity extends CordovaActivity
             }
         });
 
-        btnPhoneGap.setOnClickListener(new View.OnClickListener() {
+        btnListEventPG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,WebViewActivity.class);
+                Intent intent = new Intent(MainActivity.this,ListEventWebViewActivity.class);
                 startActivity(intent);
             }
         });
 
+        btnInsertEventPG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,InsertEventWebViewActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

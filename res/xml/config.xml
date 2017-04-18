@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.cordova.helloCordova" version="2.0.0" xmlns="http://www.w3.org/ns/widgets">
-    <name>Twitcher</name>
+    <name>iDiscovery</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
@@ -36,4 +36,5 @@
     <feature name="CustomPlugin">
         <param name="android-package" value="com.coursework.app.CustomPlugin" />
     </feature>
+    <plugin name="io.litehelpers.cordova.sqlite" spec="0.7.6" source="pgb" />
 </widget>

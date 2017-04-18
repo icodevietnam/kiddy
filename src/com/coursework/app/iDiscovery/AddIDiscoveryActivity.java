@@ -46,7 +46,7 @@ public class AddIDiscoveryActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_kiddy);
+        setContentView(R.layout.activity_add_idiscovery);
         final EditText textActivityName = (EditText)this.findViewById(R.id.textActivityName);
         final EditText textLocation = (EditText)this.findViewById(R.id.textLocation);
         final EditText textDate = (EditText)this.findViewById(R.id.textDate);
@@ -272,7 +272,7 @@ public class AddIDiscoveryActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_add_kiddy, menu);
+        getMenuInflater().inflate(R.menu.menu_add_idiscovery, menu);
         return true;
     }
 

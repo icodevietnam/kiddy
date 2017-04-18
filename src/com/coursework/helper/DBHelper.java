@@ -19,7 +19,7 @@ public class DBHelper extends SQLiteOpenHelper{
     public static final String DATABASE_NAME = "IDiscoveryCW.db";
 
     //IDISCOVERY
-    public static final String IDISCOVERY_TABLE = "kiddy";
+    public static final String IDISCOVERY_TABLE = "idiscovery";
     public static final String IDISCOVERY_ID = "id";
     public static final String IDISCOVERY_ACTIVITY_NAME = "activityName";
     public static final String IDISCOVERY_LOCATION = "location";
@@ -39,7 +39,7 @@ public class DBHelper extends SQLiteOpenHelper{
     public static final String REPORT_ID = "id";
     public static final String REPORT_NAME ="name";
     public static final String REPORT_DESC="description";
-    public static final String REPORT_IDISCOVERY_ID="kiddyId";
+    public static final String REPORT_IDISCOVERY_ID="report_id";
 
     public DBHelper(Context context){
         super(context, DATABASE_NAME, null, 1);
@@ -58,10 +58,12 @@ public class DBHelper extends SQLiteOpenHelper{
     // OnUpgrade SQLite
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXIST " +IDISCOVERY_TABLE);
-        db.execSQL("DROP TABLE IF EXIST " +REPORT_TABLE);
-        db.execSQL("DROP TABLE IF EXIST " +EVENT_TABLE);
-        onCreate(db);
+        if(newVersion > oldVersion){
+            db.execSQL("DROP TABLE IF EXIST " +IDISCOVERY_TABLE);
+            db.execSQL("DROP TABLE IF EXIST " +REPORT_TABLE);
+            db.execSQL("DROP TABLE IF EXIST " +EVENT_TABLE);
+            onCreate(db);
+        }
     }
 
     public boolean insertIDiscovery(iDiscovery iDiscovery){
@@ -169,7 +171,7 @@ public class DBHelper extends SQLiteOpenHelper{
     }
 
     public Boolean checkIDiscoveryDuplicate(String activityName){
-        List<iDiscovery> listKiddies = new ArrayList<iDiscovery>();
+        List<iDiscovery> listiDiscoveries = new ArrayList<iDiscovery>();
         String query = "SELECT * FROM " + IDISCOVERY_TABLE + " WHERE " + IDISCOVERY_ACTIVITY_NAME + " ='" +activityName +"'";
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
@@ -183,19 +185,19 @@ public class DBHelper extends SQLiteOpenHelper{
                 iDiscovery.setTime(cursor.getString(cursor.getColumnIndex(IDISCOVERY_TIME)));
                 iDiscovery.setReporterName(cursor.getString(cursor.getColumnIndex(IDISCOVERY_REPORTER_NAME)));
                 // Adding contact to list
-                listKiddies.add(iDiscovery);
+                listiDiscoveries.add(iDiscovery);
             } while (cursor.moveToNext());
         }
-        if(listKiddies.size() > 0){
+        if(listiDiscoveries.size() > 0){
             return true;
         }else
             return  false;
     }
 
     public List<iDiscovery> searchByName(String name){
-        List<iDiscovery> listKiddies = new ArrayList<iDiscovery>();
+        List<iDiscovery> listiDiscoveries = new ArrayList<iDiscovery>();
         if(name.trim().isEmpty()){
-            listKiddies = getAllKiddies();
+            listiDiscoveries = getAlliDiscoveries();
         }
         else {
             String query = "SELECT * FROM " + IDISCOVERY_TABLE + " WHERE " + IDISCOVERY_ACTIVITY_NAME + " LIKE '%" + name + "%'";
@@ -211,15 +213,15 @@ public class DBHelper extends SQLiteOpenHelper{
                     iDiscovery.setTime(cursor.getString(cursor.getColumnIndex(IDISCOVERY_TIME)));
                     iDiscovery.setReporterName(cursor.getString(cursor.getColumnIndex(IDISCOVERY_REPORTER_NAME)));
                     // Adding contact to list
-                    listKiddies.add(iDiscovery);
+                    listiDiscoveries.add(iDiscovery);
                 } while (cursor.moveToNext());
             }
         }
-        return listKiddies;
+        return listiDiscoveries;
     }
 
-    public List<iDiscovery> getAllKiddies(){
-        List<iDiscovery> listKiddies = new ArrayList<iDiscovery>();
+    public List<iDiscovery> getAlliDiscoveries(){
+        List<iDiscovery> listiDiscoveries = new ArrayList<iDiscovery>();
         String query = "SELECT * FROM " + IDISCOVERY_TABLE;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
@@ -233,10 +235,10 @@ public class DBHelper extends SQLiteOpenHelper{
                 iDiscovery.setTime(cursor.getString(cursor.getColumnIndex(IDISCOVERY_TIME)));
                 iDiscovery.setReporterName(cursor.getString(cursor.getColumnIndex(IDISCOVERY_REPORTER_NAME)));
                 // Adding report to list
-                listKiddies.add(iDiscovery);
+                listiDiscoveries.add(iDiscovery);
             } while (cursor.moveToNext());
         }
-        return listKiddies;
+        return listiDiscoveries;
     }
 
     public List<Event> getAllEvents(){

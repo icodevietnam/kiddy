@@ -28,7 +28,7 @@ public class ViewActivity extends Activity {
         TextView txtViewLocation = (TextView)this.findViewById(R.id.txtViewKiddyLocation);
         TextView txtViewDateTime = (TextView)this.findViewById(R.id.txtViewKiddyDateTime);
         TextView txtViewWatcher = (TextView)this.findViewById(R.id.txtViewKiddyReporterName);
-        String birdIdString = intent.getStringExtra("kiddyId");
+        String birdIdString = intent.getStringExtra("iDiscoveryId");
         final Integer id = Integer.parseInt(birdIdString);
         iDiscovery iDiscovery = myDb.getIDiscoveryData(id);
         txtViewId.setText(id.toString());
@@ -40,8 +40,8 @@ public class ViewActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Event event = new Event();
-                event.setName("Delete bird id:" + id);
-                event.setDescription("Delete bird with id " + id + " successfully !!!");
+                event.setName("Delete iDiscovery id:" + id);
+                event.setDescription("Delete iDiscovery with id " + id + " successfully !!!");
                 myDb.insertEvent(event);
                 myDb.deleteIDiscovery(id);
                 Intent intent = new Intent(ViewActivity.this, ListIDiscoveryActivity.class);
@@ -54,7 +54,7 @@ public class ViewActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ViewActivity.this, AddReportActivity.class);
-                intent.putExtra("kiddyId",id + "");
+                intent.putExtra("iDiscoveryId",id + "");
                 startActivity(intent);
                 finish();
             }
@@ -64,7 +64,7 @@ public class ViewActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ViewActivity.this,ViewReportActivity.class);
-                intent.putExtra("kiddyId",id + "");
+                intent.putExtra("iDiscoveryId",id + "");
                 startActivity(intent);
                 finish();
             }

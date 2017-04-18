@@ -1,0 +1,171 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/txtKiddyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="Activity Name:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fffcfd"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/textActivityName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtKiddyName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:width="150dp"
+            android:height="30dp"
+            android:background="#ffffff"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/txtLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textActivityName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Location:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fffcfd"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/textLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtLocation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:width="150dp"
+            android:height="30dp"
+            android:background="#ffffff"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textLocation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Date:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fffcfd"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/textDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDate"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:width="150dp"
+            android:height="30dp"
+            android:background="#ffffff"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/txtTimeSee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textDate"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Time:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fffcfd"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/textTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTimeSee"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:width="150dp"
+            android:height="30dp"
+            android:background="#ffffff"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/txtWatcherName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTime"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Reporter Name:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fffcfd"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/textReporterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtWatcherName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:width="150dp"
+            android:height="30dp"
+            android:background="#ffffff"
+            android:textColor="#000000" />
+
+
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSave"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/btnLoadImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textReporterName"
+            android:text="Load Image" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btnLoadImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Save Activity Name"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+
+    </RelativeLayout>
+</ScrollView>

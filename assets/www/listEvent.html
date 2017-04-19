@@ -19,34 +19,105 @@
 -->
 <html>
     <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com/accessibility/javascript/android/; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' data: https://ssl.gstatic.com/accessibility/javascript/android/; style-src * 'unsafe-inline';script-src * 'unsafe-inline' 'unsafe-eval'; media-src *">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-        <title>Page Common</title>
+        <title>List Event</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript">
+            document.addEventListener("deviceready",onDeviceReady,false);
+
+            // Cordova is ready
+            //
+            function onDeviceReady() {
+                var db = window.openDatabase("IDiscoveryCW.db", "1.0", "iDiscovery Demo", 200000);
+                db.transaction(populateDB, errorCB, successCB);
+            }
+
+            function populateDB(tx) {
+                tx.executeSql("DROP TABLE IF EXISTS 'idiscovery' ");
+                tx.executeSql("Create table idiscovery (id integer primary key autoincrement not null,activityName text,location text,date text,time text,reporterName text)");
+            }
+
+            // Transaction error callback
+            //
+            function errorCB(err) {
+                alert("Error processing SQL: "+err.code + " and message :" + err.message);
+            }
+
+            // Transaction success callback
+            //
+            function successCB() {
+                var db = window.openDatabase("IDiscoveryCW.db", "1.0", "Cordova Demo", 200000);
+                db.transaction(queryDB, errorCB);
+            }
+
+            // Query the database
+            //
+            function queryDB(tx) {
+                tx.executeSql("SELECT * FROM idiscovery ", [], querySuccess, errorCB);
+            }
+
+            function querySuccess(tx,results){
+                var length = results.rows.length;
+                alert(length);
+            }
+
+	    </script>
     </head>
-    <body>
-    <div class="app" style="position : absolute;top : 10%;">
+    <body onload="onDeviceReady()">
+    <div class="app" style="position : absolute;top : 5%;left:40%;">
         <form class="form-horizontal">
-        <div class="form-group">
-            <button id="insertEvent" class='local btn btn-primary btn-lg btn-block' onClick=""> Insert Events </button>
-        </div>
-        <div class="form-group">
-            <button id="listEvent" class='local btn btn-primary btn-lg btn-block' onClick="">List Events</button>
-        </div>
+            <div class="form-group"><h2 style="color:red;">iDiscovery</h2></div>
+            <div class="form-group">
+                <table class="table table-responsive">
+                    <thead class="primary">
+                    <tr>
+                        <th>Name</th>
+                        <th>Location</th>
+                        <th>Date</th>
+                        <th>Reporter</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!--<tr>-->
+                        <!--<td>Name 1</td>-->
+                        <!--<td>Location 1</td>-->
+                        <!--<td>13/02/2014</td>-->
+                        <!--<td>Reporter 1</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>Name 2</td>-->
+                        <!--<td>Location 2</td>-->
+                        <!--<td>13/03/2014</td>-->
+                        <!--<td>Reporter 2</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>Name 3</td>-->
+                        <!--<td>Location 3</td>-->
+                        <!--<td>13/04/2014</td>-->
+                        <!--<td>Reporter 3</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>Name 4</td>-->
+                        <!--<td>Location 4</td>-->
+                        <!--<td>13/05/2014</td>-->
+                        <!--<td>Reporter 4</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>Name 5</td>-->
+                        <!--<td>Location 5</td>-->
+                        <!--<td>13/06/2014</td>-->
+                        <!--<td>Reporter 5</td>-->
+                    <!--</tr>-->
+                    </tbody>
+                </table>
+            </div>
         </form>
     </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-		    function ClientSideMethod(message){
-			    var x=document.getElementById("te");
-  				x.innerHTML = message;
-		    }
-	    </script>
     </body>
 </html>

@@ -19,7 +19,7 @@
 -->
 <html>
     <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com/accessibility/javascript/android/; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' data: https://ssl.gstatic.com/accessibility/javascript/android/; style-src * 'unsafe-inline';script-src * 'unsafe-inline' 'unsafe-eval'; media-src *">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -27,26 +27,91 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
         <title>Page Common</title>
+        <script type="text/javascript">
+            document.addEventListener("deviceready",onDeviceReady,false);
+
+            // Cordova is ready
+            //
+            function onDeviceReady() {
+                var db = window.openDatabase("IDiscoveryCW.db", "1.0", "iDiscovery Demo", 200000);
+                db.transaction(populateDB, errorCB, successCB);
+            }
+
+            function populateDB(tx) {
+                tx.executeSql("DROP TABLE IF EXISTS idiscovery ");
+                tx.executeSql("Create table idiscovery (id integer primary key autoincrement not null,activityName text,location text,date text,time text,reporterName text)");
+            }
+
+            // Transaction error callback
+            //
+            function errorCB(err) {
+                alert("Error processing SQL: "+err.code + " and message :" + err.message);
+            }
+
+            // Transaction success callback
+            //
+            function successCB() {
+                var db = window.openDatabase("IDiscoveryCW.db", "1.0", "Cordova Demo", 200000);
+                db.transaction(queryDB, errorCB);
+            }
+
+            // Query the database
+            //
+            function queryDB(tx) {
+                tx.executeSql("SELECT * FROM idiscovery ", [], querySuccess, errorCB);
+            }
+
+            //Insert query
+            //
+            function insertDB(tx) {
+                tx.executeSql('INSERT INTO idiscovery (activityName,location,date,time,reporterName) VALUES ("' +document.getElementById("activityName").value
+                        +'","'+document.getElementById("location").value+'","'+document.getElementById("date").value+'","'+document.getElementById("time").value+'")+'","'+document.getElementById("reporterName").value');
+            }
+
+            function goInsert() {
+                var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+                db.transaction(insertDB, errorCB, successCB);
+                alert("Insert");
+            }
+
+            function querySuccess(tx,results){
+                var length = results.rows.length;
+            }
+
+	    </script>
     </head>
     <body>
-    <div class="app" style="position : absolute;top : 10%;">
-        <form class="form-horizontal">
-        <div class="form-group">
-            <button id="insertEvent" class='local btn btn-primary btn-lg btn-block' onClick=""> Insert Events </button>
-        </div>
-        <div class="form-group">
-            <button id="listEvent" class='local btn btn-primary btn-lg btn-block' onClick="">List Events</button>
-        </div>
+    <div class="app" style="height:100%;position:absolute;top:-7%;">
+        <form>
+            <div class="form-group">
+                <label >Activity Name</label>
+                <input type="text" class="form-control" name="activityName" id="activityName" placeholder="Activity Name" >
+                <span class="error-activity-name"></span>
+            </div>
+            <div class="form-group">
+                <label >Location</label>
+                <input type="text" class="form-control" name="location" id="location" placeholder="Location" >
+                <span class="error-location"></span>
+            </div>
+            <div class="form-group">
+                <label >Date</label>
+                <input type="text" class="form-control" name="date" id="date" placeholder="Date" readonly >
+                <span class="error-date"></span>
+            </div>
+            <div class="form-group">
+                <label >Time</label>
+                <input type="text" class="form-control" name="time" id="time" placeholder="Time"  readonly>
+                <span class="error-time"></span>
+            </div>
+            <div class="form-group">
+                <label >Reporter Name</label>
+                <input type="text" class="form-control" name="reporterName" id="reporterName" placeholder="Reporter Name" >
+                <span class="error-reporter"></span>
+            </div>
+            <button id="btnSubmit" type="button" onclick="return goInsert();" class="btn btn-default">Submit</button>
         </form>
     </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript">
-		    function ClientSideMethod(message){
-			    var x=document.getElementById("te");
-  				x.innerHTML = message;
-		    }
-	    </script>
     </body>
 </html>

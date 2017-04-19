@@ -28,8 +28,8 @@ public class ViewActivity extends Activity {
         TextView txtViewLocation = (TextView)this.findViewById(R.id.txtViewKiddyLocation);
         TextView txtViewDateTime = (TextView)this.findViewById(R.id.txtViewKiddyDateTime);
         TextView txtViewWatcher = (TextView)this.findViewById(R.id.txtViewKiddyReporterName);
-        String birdIdString = intent.getStringExtra("iDiscoveryId");
-        final Integer id = Integer.parseInt(birdIdString);
+        String iDiscoveryIdStr = intent.getStringExtra("iDiscoveryId");
+        final Integer id = Integer.parseInt(iDiscoveryIdStr);
         iDiscovery iDiscovery = myDb.getIDiscoveryData(id);
         txtViewId.setText(id.toString());
         txtViewKiddyActivityName.setText("Activity Name:" + iDiscovery.getActivityName());

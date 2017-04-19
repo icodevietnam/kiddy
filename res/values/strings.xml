@@ -10,8 +10,8 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_add_bird">AddBirdActivity</string>
-    <string name="title_activity_list_bird">ListBirdActivity</string>
+    <string name="title_activity_add_bird">AddiDiscoveryActivity</string>
+    <string name="title_activity_list_bird">ListiDiscoveryActivity</string>
     <string name="title_activity_view">ViewActivity</string>
     <string name="title_activity_list_event">ListEventActivity</string>
     <string name="title_activity_add_report">AddReportActivity</string>

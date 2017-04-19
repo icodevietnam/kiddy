@@ -24,7 +24,7 @@ public class ViewReportActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_report);
         final Intent intent = getIntent();
-        final String birdIdString = intent.getStringExtra("kiddyId");
+        final String birdIdString = intent.getStringExtra("iDiscoveryId");
         myDb = new DBHelper(this);
         listView = (ListView)this.findViewById(R.id.listReport);
         List<Report> listReports = myDb.getAllReports(birdIdString);

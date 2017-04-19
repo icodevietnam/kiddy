@@ -45,7 +45,7 @@
         </activity>
         <activity
             android:name=".iDiscovery.AddIDiscoveryActivity"
-            android:label="AddKiddyActivity"></activity>
+            android:label="AddIDiscoveryActivity"></activity>
         <activity
             android:name=".iDiscovery.ListIDiscoveryActivity"
             android:label="ListIDiscoveryActivity"></activity>
@@ -61,7 +61,8 @@
         <activity
             android:name=".iDiscovery.ViewReportActivity"
             android:label="@string/title_activity_view_report"></activity>
-        <activity android:name=".iDiscovery.WebViewActivity"></activity>
+        <activity android:name=".iDiscovery.ListEventWebViewActivity"></activity>
+        <activity android:name=".iDiscovery.InsertEventWebViewActivity"></activity>
     </application>
 
 </manifest>

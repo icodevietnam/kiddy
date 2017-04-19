@@ -33,8 +33,4 @@
     <feature name="Toast">
         <param name="android-package" value="nl.xservices.plugins.Toast" />
     </feature>
-    <feature name="CustomPlugin">
-        <param name="android-package" value="com.coursework.app.CustomPlugin" />
-    </feature>
-    <plugin name="io.litehelpers.cordova.sqlite" spec="0.7.6" source="pgb" />
 </widget>

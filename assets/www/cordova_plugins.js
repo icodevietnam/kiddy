@@ -30,28 +30,22 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-whitelist/whitelist.js",
-        "id": "cordova-plugin-whitelist.whitelist",
-        "runs": true
-    },
-    {
-        "file": "plugins/nl.x-services.plugins.toast/www/Toast.js",
-        "id": "nl.x-services.plugins.toast.Toast",
+        "id": "cordova-sqlite-storage.SQLitePlugin",
+        "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
+        "pluginId": "cordova-sqlite-storage",
         "clobbers": [
-            "window.plugins.toast"
+            "SQLitePlugin"
         ]
     },
     {
-        "file": "plugins/nl.x-services.plugins.toast/test/tests.js",
-        "id": "nl.x-services.plugins.toast.tests"
-    },
-    {
-        "file": "plugins/cordova-plugin-hybrid/www/HybridBridge.js",
-        "id": "cordova-plugin-hybrid.HybridBridge",
-        "clobbers": [
-            "HybridBridge"
+            "id": "cordova-plugin-sqlite.SQLitePlugin",
+            "file": "plugins/cordova-plugin-sqlite/www/SQLitePlugin.js",
+            "pluginId": "cordova-plugin-sqlite",
+            "clobbers": [
+                "window.sqlitePlugin",
+                "cordova.plugins.sqlitePlugin"
         ]
-    }
+    },
 ];
 module.exports.metadata = 
 // TOP OF METADATA
@@ -59,10 +53,6 @@ module.exports.metadata =
     "org.apache.cordova.dialogs": "0.3.0",
     "org.apache.cordova.vibration": "0.3.13",
     "org.apache.cordova.device": "0.3.0",
-    "org.apache.cordova.console": "0.2.13",
-    "cordova-plugin-whitelist": "1.0.0",
-    "nl.x-services.plugins.toast": "2.0.4",
-    "cordova-plugin-hybrid": "1.0.0"
 }
 // BOTTOM OF METADATA
 });
